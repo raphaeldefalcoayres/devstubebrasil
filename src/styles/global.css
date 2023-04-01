@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #020305;
+  color: #c1c9f3;
+}
+
+html,
+body,
+#_next {
+  height: 100%;
+}
+
+main {
+  height: calc(100% - 65px);
+}
