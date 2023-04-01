@@ -27,6 +27,7 @@ export interface VideoModel {
 
 export interface Category {
   name: string
+  category: string
   videos: VideoModel[]
 }
 

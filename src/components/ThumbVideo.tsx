@@ -1,7 +1,6 @@
 'use client'
 
 import { VideoModel } from '@/@types'
-import { tagsDefine } from '@/constants'
 import { formatDuration, getElapsedTime } from '@/utils'
 import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
@@ -50,7 +49,7 @@ const ThumbVideo = ({ video, className = '' }: ThumbVideoProps) => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-start">
-          <button className="text-[#2D3668] hover:text-[#4f5a99]">
+          {/* <button className="text-[#2D3668] hover:text-[#4f5a99]">
             <FaChevronUp className="w-6 h-6" />
           </button>
           <strong className="font-semibold text-sm" title="Relevancia">
@@ -58,7 +57,7 @@ const ThumbVideo = ({ video, className = '' }: ThumbVideoProps) => {
           </strong>
           <button className="text-[#682D2D] hover:text-[#aa5959]">
             <FaChevronDown className="w-6 h-6" />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -6,11 +6,16 @@ import { buildCategories } from '@/utils/buildCategories'
 import { useEffect, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
+interface totalsByCagegoryProps {
+  [category: string]: number
+}
+
 const Carousel = ({ data, title }: CarouselProps) => {
   const [currentPage, setCurrentPage] = useState(0)
   const [hasNextPage, setHasNextPage] = useState(false)
   const [hasPreviousPage, setHasPreviousPage] = useState(false)
   const [thumbsVideosData, setThumbsVideosData] = useState<Category[]>([])
+  const [totalsByCagegory, setTotalsByCagegory] = useState<totalsByCagegoryProps>()
 
   const handleNextPage = () => {
     if (hasNextPage) {
@@ -25,6 +30,21 @@ const Carousel = ({ data, title }: CarouselProps) => {
   }
 
   useEffect(() => {
+    const totalsByCagegory: totalsByCagegoryProps = {}
+
+    data.forEach((item) => {
+      if (totalsByCagegory[item.category]) {
+        totalsByCagegory[item.category] += 1
+      } else {
+        totalsByCagegory[item.category] = 1
+      }
+    })
+
+    setTotalsByCagegory(totalsByCagegory)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
     const categories = buildCategories(data)
     setThumbsVideosData(categories)
     setHasNextPage(currentPage < categories.length - 1)
@@ -35,7 +55,12 @@ const Carousel = ({ data, title }: CarouselProps) => {
   return (
     <div className="flex flex-col w-full">
       <div className="w-full flex items-center justify-between">
-        <h2 className="mb-4 font-semibold text-xl uppercase">{title}</h2>
+        <h2 className="mb-4 font-semibold text-xl uppercase flex items-center gap-2">
+          {title}{' '}
+          <span className="bg-blue-500 text-base py-0 px-1 rounded-lg">
+            {totalsByCagegory && totalsByCagegory[title]}
+          </span>
+        </h2>
         <div>
           <button className="disabled:opacity-50" disabled={!hasPreviousPage} onClick={handlePreviousPage}>
             <FaChevronLeft className="w-6 h-6" />

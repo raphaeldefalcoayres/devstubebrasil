@@ -55,7 +55,7 @@ const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: Vide
               </div>
             </div>
             <div className="flex flex-col items-center justify-start -mt-3">
-              <button className="text-[#2D3668] hover:text-[#4f5a99]">
+              {/* <button className="text-[#2D3668] hover:text-[#4f5a99]">
                 <FaChevronUp className="w-6 h-6" />
               </button>
               <strong className="font-semibold text-sm" title="Relevancia">
@@ -63,7 +63,7 @@ const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: Vide
               </strong>
               <button className="text-[#682D2D] hover:text-[#aa5959]">
                 <FaChevronDown className="w-6 h-6" />
-              </button>
+              </button> */}
             </div>
           </div>
           <div className={`${!showMore ? 'line-clamp-3' : ''} leading-6`}>{videoData.description}</div>

@@ -74,3 +74,14 @@ export const tagsDefine = [
   'ambiente',
   'sair do zero',
 ]
+
+export const categoryOrder = [
+  'html',
+  'css',
+  'javascript',
+  'typescript',
+  'react.js',
+  'next.js',
+  'react native',
+  'node.js',
+]
