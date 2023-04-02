@@ -24,7 +24,7 @@ const SearchInput = () => {
   return (
     <div className="fixed w-full flex flex-col z-40">
       <div className="w-full text-xs font-thin text-white bg-blue-900 py-1 text-center">
-        Este é um site <b>beta</b> com alguns dados de vídeos youtube de 2020 a 2023 de categorias como HTML, CSS,
+        Este é um site <b>beta</b> com alguns dados de vídeos youtube de 2019 a 2023 de categorias como HTML, CSS,
         Javascript, Typescript e outros.
       </div>
       <div className="w-full flex items-center justify-between py-3 px-6 bg-[#070913]">

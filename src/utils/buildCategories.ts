@@ -42,6 +42,7 @@ export const buildCategories = (videos: VideoModel[]): Category[] => {
       categories.push({
         name: categoryName,
         videos: slicedVideos,
+        category: '',
       })
     }
   }

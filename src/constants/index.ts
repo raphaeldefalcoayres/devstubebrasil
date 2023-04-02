@@ -78,6 +78,7 @@ export const tagsDefine = [
 export const categoryOrder = [
   'html',
   'css',
+  'tailwindcss',
   'javascript',
   'typescript',
   'react.js',
