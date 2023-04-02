@@ -15,7 +15,8 @@ body {
 
 html,
 body,
-#_next {
+#_next,
+body > div {
   height: 100%;
 }
 
