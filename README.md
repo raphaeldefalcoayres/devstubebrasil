@@ -2,6 +2,8 @@
 
 DevTubeBrasil é uma plataforma de conteúdo de alta qualidade feita exclusivamente para desenvolvedores brasileiros. Nossa missão é tornar mais fácil e organizado o acesso a conteúdos relevantes, sem distrações desnecessárias. Descubra vídeos de especialistas da indústria, tutoriais práticos e entrevistas inspiradoras em um só lugar. Junte-se a nossa comunidade apaixonada por tecnologia e aprimore suas habilidades de programação hoje mesmo! 🚀
 
+Demo: [https://devstubebrasil.vercel.app/](https://devstubebrasil.vercel.app/)
+
 ## Foco e princípios 🎯
 
 - Ajudar a comunidade.
@@ -12,10 +14,13 @@ DevTubeBrasil é uma plataforma de conteúdo de alta qualidade feita exclusivame
 
 ## Funcionalidades 1.0 (MVP) 🚀
 
-- Lista de vídeos organizados por categoria (HTML, CSS, TailwindCSS, JavaScript, TypeScript, React.js, Next.js, React Native, Node.js).
-- Filtro de vídeos por palavra-chave.
-- Autenticação com GitHub.
-- Salvar o progresso assistido.
+- [x] Lista de vídeos de 2019 a 2023 organizados por categoria (HTML, CSS, TailwindCSS, JavaScript, TypeScript, React.js, Next.js, React Native, Node.js).
+- [x] Filtro de vídeos por palavra-chave.
+- [ ] Lista de vídeos assistidos
+- [ ] Lista de vídeos relevantes
+- [ ] Autenticação com GitHub.
+- [ ] Salvar o progresso assistido.
+- [ ] Visualizar o progress através de level e métricas.
 
 ## Tecnologias 💻
 
@@ -25,8 +30,8 @@ DevTubeBrasil é uma plataforma de conteúdo de alta qualidade feita exclusivame
 
 ## Contribuidores Atuais 👥
 
-@raphaeldefalcoayres - Tech lead na eletomídia
-@viniciusidacruz - Dev Fullstack senior da frete.com
+- [@raphaeldefalcoayres](https://github.com/raphaeldefalcoayres) - Tech lead na eletromidia
+- [@viniciusidacruz](https://github.com/viniciusidacruz) - Dev Fullstack senior da frete.com
 
 ## Contribuições 🤝
 
