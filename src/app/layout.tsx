@@ -1,4 +1,6 @@
 import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
+
 import '@/styles/global.css'
 
 export const metadata = {
@@ -10,10 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body>
-        <div>
+      <body className="flex min-h-screen">
+        <Sidebar />
+        <div className="flex flex-col w-full">
           <Header />
-          <div className="pt-20">{children}</div>
+
+          {children}
         </div>
       </body>
     </html>
