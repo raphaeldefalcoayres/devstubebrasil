@@ -1,38 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DevTubeBrasil👨‍💻🇧🇷
 
-## Getting Started
+DevTubeBrasil é uma plataforma de conteúdo de alta qualidade feita exclusivamente para desenvolvedores brasileiros. Nossa missão é tornar mais fácil e organizado o acesso a conteúdos relevantes, sem distrações desnecessárias. Descubra vídeos de especialistas da indústria, tutoriais práticos e entrevistas inspiradoras em um só lugar. Junte-se a nossa comunidade apaixonada por tecnologia e aprimore suas habilidades de programação hoje mesmo! 🚀
 
-First, run the development server:
+## Foco e princípios 🎯
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Ajudar a comunidade.
+- Fazer lançamentos rápidos.
+- Evolução gradual com o tempo.
+- Entregas de qualidade.
+- Feito melhor que perfeito.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades 1.0 (MVP) 🚀
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Lista de vídeos organizados por categoria (HTML, CSS, TailwindCSS, JavaScript, TypeScript, React.js, Next.js, React Native, Node.js).
+- Filtro de vídeos por palavra-chave.
+- Autenticação com GitHub.
+- Salvar o progresso assistido.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Tecnologias 💻
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Next.js
+- TypeScript
+- TailwindCSS
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contribuidores Atuais 👥
 
-## Learn More
+@raphaeldefalcoayres - Tech lead na eletomídia
+@viniciusidacruz - Dev Fullstack senior da frete.com
 
-To learn more about Next.js, take a look at the following resources:
+## Contribuições 🤝
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Estamos procurando contribuidores apaixonados por tecnologia e interessados em ajudar a comunidade brasileira de desenvolvimento. É possível contribuir de diversas formas:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Adicionando vídeos à plataforma.
+- Melhorando o layout e a experiência do usuário.
+- Aumentando a quantidade de funcionalidades.
+- Divulgando a plataforma para a comunidade.
 
-## Deploy on Vercel
+Para contribuir, basta criar uma issue ou enviar um pull request no nosso repositório no GitHub: [DevTubeBrasil](https://github.com/seu-username/devtube-brasil).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribuições 🆘
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Estamos muito felizes em ter vocês interessados em contribuir com nosso projeto. Queremos deixar claro que a participação de vocês é muito importante para o sucesso do nosso aplicativo, e valorizamos muito as ideias e contribuições que vocês podem trazer.
+
+Para facilitar a interação entre todos, gostaríamos de lembrar alguns pontos importantes sobre como contribuir com nosso projeto:
+
+### Discussões
+
+Utilizem a aba de discussões para compartilhar ideias e sugestões para o projeto. Essa é uma ótima maneira de começar uma discussão sobre algo que possa ser melhorado ou adicionado ao aplicativo.
+
+### Issues
+
+Caso encontrem algum problema durante o uso do aplicativo ou queiram sugerir uma nova tarefa, utilizem a aba de issues. Lá, vocês podem postar as suas sugestões e reportar problemas encontrados. É importante lembrar que novas tarefas só devem ser criadas se a comunidade aprovar na aba de discussões.
+
+### Pull Requests
+
+Se vocês quiserem contribuir com código, podem fazer um fork do repositório e trabalhar em suas próprias cópias. Quando finalizarem, enviem um pull request com uma descrição detalhada do que foi feito e quais as mudanças realizadas.
+
+## Licença 📝
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+
+Obrigado por contribuir com o DevTubeBrasil! 🚀🇧🇷
