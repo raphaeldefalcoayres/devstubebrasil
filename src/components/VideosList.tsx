@@ -19,6 +19,10 @@ export default function VideoList({ videos }: { videos: VideoModel[] }) {
 
   let sanitizedSearchTerm = searchQuery?.toLowerCase().replace(/\.js/g, 'js') || ''
 
+  videos = videos.sort((a, b) => {
+    return new Date(b.publishTime).getTime() - new Date(a.publishTime).getTime()
+  })
+
   // regras de filtro:
   // 1 - se for apenas uma palavra e bater com uma das categorias tipo html ja filtra todos os vídeos por categoria
   // 2 - se tiver .js tanto na palavra da busca quanto no titulo removo pra poder comparar em igualdade
