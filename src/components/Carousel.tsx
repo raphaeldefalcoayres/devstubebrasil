@@ -73,7 +73,7 @@ const Carousel = ({ data, title }: CarouselProps) => {
       <div className="flex w-full flex-wrap gap-4 h-80 relative">
         {thumbsVideosData[currentPage]?.videos.map((video: VideoModel) => (
           <ThumbVideo
-            className="w-[calc(100%-15px)] md:w-[calc(33%-15px)] lg:w-[calc(25%-15px)] 3xl:w-[calc(20%-15px)] 4xl:w-[calc(16.7%-15px)]"
+            className="w-full md:w-[calc(33%-15px)] lg:w-[calc(25%-15px)] 3xl:w-[calc(20%-15px)] 4xl:w-[calc(16.7%-15px)]"
             key={video.videoId}
             video={video}
           />
