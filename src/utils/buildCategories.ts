@@ -3,13 +3,13 @@ import { Category, VideoModel } from '@/@types'
 let ITEMS_PER_PAGE: number
 
 if (typeof window !== 'undefined') {
-  if (window.innerWidth > 1920) {
+  if (window.outerWidth > 1920) {
     ITEMS_PER_PAGE = 7 // 2 XL size
-  } else if (window.innerWidth === 1920) {
+  } else if (window.outerWidth === 1920) {
     ITEMS_PER_PAGE = 5 // XL size
-  } else if (window.innerWidth >= 1024) {
+  } else if (window.outerWidth >= 1024) {
     ITEMS_PER_PAGE = 4 // MD size
-  } else if (window.innerWidth >= 800) {
+  } else if (window.outerWidth >= 800) {
     ITEMS_PER_PAGE = 3 // SM size
   } else {
     ITEMS_PER_PAGE = 1 // XS size (default)
