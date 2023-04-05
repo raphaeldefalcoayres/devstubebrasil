@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className="relative">
       <body>
         <div className="text-xs font-thin h-fit text-white bg-blue-900 text-center absolute top-0 left-0 w-full px-4 text-center">
-          <span className="hidden md:flex">
+          <span className="hidden md:block">
             Este é um site <b>beta</b> com alguns dados de vídeos youtube de 2019 a 2023 de categorias como HTML, CSS,
             Javascript, Typescript e outros.
           </span>
