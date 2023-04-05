@@ -56,12 +56,7 @@ const Carousel = ({ data, title }: CarouselProps) => {
   return (
     <div className="flex flex-col w-full">
       <div className="w-full flex items-center justify-between">
-        <h2 className="mb-4 font-semibold text-xl uppercase flex items-center gap-2">
-          {title}{' '}
-          <span className="bg-blue-500 text-base py-0 px-1 rounded-lg">
-            {totalsByCagegory && totalsByCagegory[title]}
-          </span>
-        </h2>
+        <h2 className="mb-4 font-semibold text-xl uppercase flex items-center gap-2">{title}</h2>
         <div>
           <button className="disabled:opacity-50" disabled={!hasPreviousPage} onClick={handlePreviousPage}>
             <FaChevronLeft className="w-6 h-6" />

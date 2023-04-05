@@ -15,8 +15,8 @@ export default function Sidebar() {
         open ? 'md:w-36' : 'md:w-auto'
       }`}
     >
-      <Link href="/" className="md:mb-4">
-        <FaYoutube className="text-blue-500 w-8 h-8" />
+      <Link href="/" className="md:mb-4 flex items-center gap-2">
+        <FaYoutube className="text-blue-500 w-8 h-8" /> {open && <strong className="hidden md:flex">Devstube</strong>}
       </Link>
       <button
         className={`text-primary_light/50 hover:text-primary_light hidden ${open ? 'md:flex' : 'md:flex md:tooltip'} `}
@@ -24,7 +24,7 @@ export default function Sidebar() {
         title="Expandir menu"
         onClick={() => setOpen(!open)}
       >
-        <FiMenu className="w-6 h-6" />
+        <FiMenu className="w-6 h-6" /> {open && <strong className="hidden md:flex ml-2">Menu</strong>}
       </button>
       <div className="md:flex-1 flex md:flex-col justify-start md:justify-center gap-4 ml-auto md:ml-0">
         <Link
