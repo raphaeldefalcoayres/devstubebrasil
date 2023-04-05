@@ -93,7 +93,7 @@ export const menuOptions = [
   { name: 'tailwindcss', label: 'Tailwindcss' },
   { name: 'javascript', label: 'Javascript' },
   { name: 'typescript', label: 'Typescript' },
-  { name: 'reactjs', label: 'Rreact.js' },
+  { name: 'reactjs', label: 'React.js' },
   { name: 'nextjs', label: 'Next.js' },
   { name: 'react-native', label: 'React Native' },
   { name: 'remixjs', label: 'Remix.js' },
