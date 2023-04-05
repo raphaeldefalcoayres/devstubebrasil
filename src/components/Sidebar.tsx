@@ -11,7 +11,7 @@ export default function Sidebar() {
   const [open, setOpen] = useState(false)
   return (
     <div
-      className={`md:h-full w-full bg-sidebar md:p-6 p-4 flex md:flex-col items-center gap-4 ${
+      className={`md:h-full w-full bg-sidebar md:p-6 p-4 flex md:flex-col items-center gap-4 mt-3 md:mt-0 ${
         open ? 'md:w-36' : 'md:w-auto'
       }`}
     >
