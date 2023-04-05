@@ -1,4 +1,6 @@
 import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
+
 import '@/styles/global.css'
 
 export const metadata = {
@@ -13,10 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body>
-        <div>
-          <Header />
-          <div className="pt-24 md:pt-20 w-full h-full">{children}</div>
+      <body className="md:p-8">
+        <div className="md:overflow-hidden rounded-xl w-full h-full flex md:flex-row flex-col">
+          <Sidebar />
+          <div className="flex-1 h-full bg-content flex flex-col gap-4 md:gap-8 md:p-8 p-4">
+            <Header />
+            <div className="h-full md:flex-1 mt-8">{children}</div>
+          </div>
         </div>
       </body>
     </html>

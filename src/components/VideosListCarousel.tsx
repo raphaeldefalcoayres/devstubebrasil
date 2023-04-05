@@ -20,7 +20,7 @@ export default function VideosListCarousel({ videos }: { videos: VideoModel[] })
   }
 
   return (
-    <div className="flex flex-wrap gap-4 p-4">
+    <div className="flex flex-col gap-8">
       {videosByCategory &&
         Object.keys(videosByCategory).map((category) => (
           <Carousel key={category} data={videosByCategory[category]!} title={category} />

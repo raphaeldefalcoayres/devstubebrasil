@@ -1,11 +1,10 @@
 'use client'
 
-import Link from 'next/link'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { FaSearch, FaYoutube } from 'react-icons/fa'
+import { FiSearch } from 'react-icons/fi'
 
-const SearchInput = () => {
+export default function Header() {
   const search = useSearchParams()
   const [searchQuery, setSearchQuery] = useState<string | null>(search ? search.get('q') : '')
   const router = useRouter()
@@ -22,50 +21,26 @@ const SearchInput = () => {
   }
 
   return (
-    <div className="fixed w-full flex flex-col z-40">
-      <div className="w-full text-xs font-thin text-white bg-blue-900 py-1 text-center">
-        Este é um site <b>beta</b> com alguns dados de vídeos youtube de 2019 a 2023 de categorias como HTML, CSS,
-        Javascript, Typescript e outros.
-      </div>
-      <div className="w-full flex items-center justify-between py-3 px-6 bg-[#070913]">
-        <Link href={'/'} className="flex gap-2 items-center">
-          <FaYoutube className="w-10 h-10 text-[#394894]" />{' '}
-          <strong className="text-xl md:flex hidden">DEVSTUBE BRASIL</strong>
-        </Link>
-        <div className="flex relative items-center gap-2 md:w-80">
-          <form onSubmit={onSearch} className="flex justify-center w-full">
+    <div className="w-full flex relative">
+      <div className="absolute flex items-center justify-center w-full">
+        <div className="relative w-full md:w-1/3">
+          <FiSearch className="w-5 h-5 absolute left-5 top-2" />
+          <form onSubmit={onSearch}>
             <input
               type="text"
-              value={searchQuery || ''}
-              className="w-full bg-[#020305] px-4 py-1 md:py-2 pr-4 rounded-tl-xl rounded-bl-xl"
-              placeholder="Busque aqui..."
+              className="w-full bg-background px-6 pl-12 py-1.5 text-primary_light rounded-xl"
+              placeholder="Busque por categoria ou título..."
               onChange={(event) => setSearchQuery(event.target.value)}
             />
-            <button
-              title="clique para buscar"
-              className="absolute right-0 top-0 bg-blue-900 hover:bg-blue-800 px-2 md:px-4 h-full rounded-tr-xl rounded-br-xl"
-              type="submit"
-            >
-              <FaSearch className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
           </form>
         </div>
-        <div className="flex gap-3">
-          {/* {user?.name && (
-            <>
-              <div className="relative rounded-full w-10 h-10 overflow-hidden">
-                <Image fill src={user.thumb!} alt="foto de perfil no header" />
-              </div>
-              <button onClick={handleLogout} className="flex items-center gap-1">
-                <FiLogOut /> Sair
-              </button>
-            </>
-          )} */}
-          {/* {!user.name && <button>Entrar</button>} */}
-        </div>
       </div>
+      {/* <div className="ml-auto flex gap-8 items-center">
+        <button className="bg-blue-500 rounded-xl py-2 px-6 text-white cursor-pointer hover:bg-blue-600">
+          Cadastrar
+        </button>
+        <button className="rounded-xl py-2 px-6 text-blue-500 cursor-pointer hover:bg-blue-600">Entrar</button>
+      </div> */}
     </div>
   )
 }
-
-export default SearchInput

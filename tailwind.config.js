@@ -121,7 +121,14 @@ module.exports = {
       '4xl': '2560px', // novo breakpoint 4xl
       '5xl': '3840px', // novo breakpoint 5xl
     },
-    extend: {},
+    extend: {
+      colors: {
+        background: '#0a0b0c',
+        sidebar: '#101113',
+        content: '#151719',
+        primary_light: '#c1c9f3',
+      },
+    },
   },
   plugins: [],
 }

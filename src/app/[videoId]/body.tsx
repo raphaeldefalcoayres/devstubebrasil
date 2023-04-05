@@ -3,6 +3,7 @@
 import { VideoModel } from '@/@types'
 import Spinner from '@/components/Spinner'
 import { ThumbVideo } from '@/components/ThumbVideo'
+import VideoCard from '@/components/VideoCard'
 import { getElapsedTime } from '@/utils'
 import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
@@ -30,32 +31,35 @@ const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: Vide
   }
 
   return (
-    <div className="flex md:flex-row flex-col mt-4">
-      <div className="w-full md:w-[70vw]">
-        <div className="w-full h-[39.5vw] rounded-xl overflow-hidden">
-          <ReactPlayer
-            controls={true}
-            width={'100%'}
-            height={'100%'}
-            url={`https://www.youtube.com/watch?v=${videoData.videoId}`}
-          />
-        </div>
-        <div className="flex w-full p-4 flex-col">
-          <h2 className="text-xl font-semibold">{videoData.title}</h2>
-          <div className="flex pt-3 pb-2">
-            <div className="relative overflow-hidden w-[48px] h-[44px] rounded-full border-2 border-gray-700">
-              <Image fill={true} src={videoData.channelLogo} alt="channel thumb" />
-            </div>
-            <div className="w-fit px-2">
-              <div className="opacity-40 leading-5 mt-1">
-                {videoData.channelTitle} <br />
-                <small>
-                  {formatViewCount(videoData.viewCount)} Visualizações. {getElapsedTime(videoData.publishTime)}
-                </small>
+    <div className="flex md:flex-row flex-col gap-4 md:gap-8">
+      <div className="md:w-[60vw] w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-200px)]">
+        <div className="w-full h-full">
+          <div className="w-full h-[50vw] md:h-[30vw] rounded-xl overflow-hidden">
+            <ReactPlayer
+              controls={true}
+              width={'100%'}
+              height={'100%'}
+              url={`https://www.youtube.com/watch?v=${videoData.videoId}`}
+            />
+          </div>
+          <div className="flex w-full flex-col mt-4">
+            <div className="flex pt-3 pb-2 gap-4">
+              <div className="w-8 h-8 rounded-xl relative overflow-hidden">
+                <Image fill={true} src={video.channelLogo} alt="channel thumb" />
               </div>
-            </div>
-            <div className="flex flex-col items-center justify-start -mt-3">
-              {/* <button className="text-[#2D3668] hover:text-[#4f5a99]">
+              <div className="flex flex-col gap-1 leading-4 w-[80%]">
+                <strong className="truncate w-full" title={video.title}>
+                  {video.title}
+                </strong>
+                <div className="flex items-center justify-start text-xs gap-2">
+                  <div>{video.channelTitle}</div>
+                  <small>
+                    {formatViewCount(video.viewCount)} Visualizações. {getElapsedTime(video.publishTime)}
+                  </small>
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-start -mt-3">
+                {/* <button className="text-[#2D3668] hover:text-[#4f5a99]">
                 <FaChevronUp className="w-6 h-6" />
               </button>
               <strong className="font-semibold text-sm" title="Relevancia">
@@ -64,19 +68,24 @@ const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: Vide
               <button className="text-[#682D2D] hover:text-[#aa5959]">
                 <FaChevronDown className="w-6 h-6" />
               </button> */}
+              </div>
             </div>
+            <div className={`${!showMore ? 'line-clamp-3' : ''} leading-6`}>{videoData.description}</div>
+            <button className="text-left font-semibold" onClick={() => setShowMore(!showMore)}>
+              Ver {!showMore ? 'mais' : 'menos'}
+            </button>
           </div>
-          <div className={`${!showMore ? 'line-clamp-3' : ''} leading-6`}>{videoData.description}</div>
-          <button className="text-left font-semibold" onClick={() => setShowMore(!showMore)}>
-            Ver {!showMore ? 'mais' : 'menos'}
-          </button>
         </div>
       </div>
-      <div className="flex flex-1 flex-col md:pl-4">
-        {relatedVideosData &&
-          relatedVideosData.map((relatedVideo: VideoModel) => (
-            <ThumbVideo className="w-full" key={relatedVideo.videoId} video={relatedVideo} />
-          ))}
+      <div className="w-full md:flex-1 bg-sidebar rounded-xl overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-200px)]">
+        <div className="flex flex-1 flex-col h-full ">
+          <div className="h-full overflow-x-hidden overflow-y-auto p-4 md:p-8 md:gap-8 gap-4 grid grid-cols-1">
+            {relatedVideosData &&
+              relatedVideosData.map((relatedVideo: VideoModel) => (
+                <VideoCard key={relatedVideo.videoId} video={relatedVideo} />
+              ))}
+          </div>
+        </div>
       </div>
     </div>
   )

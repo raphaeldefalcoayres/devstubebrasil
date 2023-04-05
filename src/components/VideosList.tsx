@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import Spinner from './Spinner'
 import { ThumbVideo } from './ThumbVideo'
 import { categoryOrder } from '@/constants'
+import VideoCard from './VideoCard'
 
 export default function VideoList({ videos }: { videos: VideoModel[] }) {
   const searchParams = useSearchParams()
@@ -41,20 +42,13 @@ export default function VideoList({ videos }: { videos: VideoModel[] }) {
   }
 
   return (
-    <div className="flex flex-wrap gap-4 p-4 w-full h-full">
+    <div className="grid grid-cols-1 xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 gap-4 md:gap-8 w-full h-full relative">
       {videos && videos.length <= 0 && (
-        <div className="w-full h-full flex items-center justify-center">
+        <div className="w-full h-full flex items-center justify-center absolute">
           Nenhum vídeo encontrado, tente utilizar outras palavras chaves.
         </div>
       )}
-      {videos &&
-        videos.map((video) => (
-          <ThumbVideo
-            className="w-full md:w-[calc(33%-15px)] lg:w-[calc(25%-15px)] 3xl:w-[calc(20%-15px)] 4xl:w-[calc(16.7%-15px)]"
-            key={video.videoId}
-            video={video}
-          />
-        ))}
+      {videos && videos.map((video) => <VideoCard key={video.videoId} video={video} />)}
     </div>
   )
 }

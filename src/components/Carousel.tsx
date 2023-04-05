@@ -5,6 +5,7 @@ import { ThumbVideo } from '@/components/ThumbVideo'
 import { buildCategories } from '@/utils/buildCategories'
 import { useEffect, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import VideoCard from './VideoCard'
 
 interface totalsByCagegoryProps {
   [category: string]: number
@@ -70,13 +71,9 @@ const Carousel = ({ data, title }: CarouselProps) => {
           </button>
         </div>
       </div>
-      <div className="flex w-full flex-wrap gap-4 h-80 relative">
+      <div className="w-full flex-wrap grid grid-cols-1 xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 md:gap-8 gap-4 relative">
         {thumbsVideosData[currentPage]?.videos.map((video: VideoModel) => (
-          <ThumbVideo
-            className="w-full md:w-[calc(33%-15px)] lg:w-[calc(25%-15px)] 3xl:w-[calc(20%-15px)] 4xl:w-[calc(14.28%-15px)]"
-            key={video.videoId}
-            video={video}
-          />
+          <VideoCard key={video.videoId} video={video} />
         ))}
       </div>
     </div>

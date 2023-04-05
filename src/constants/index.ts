@@ -86,3 +86,17 @@ export const categoryOrder = [
   'react native',
   'node.js',
 ]
+
+export const menuOptions = [
+  { name: 'html', label: 'HTML' },
+  { name: 'css', label: 'CSS' },
+  { name: 'tailwindcss', label: 'Tailwindcss' },
+  { name: 'javascript', label: 'Javascript' },
+  { name: 'typescript', label: 'Typescript' },
+  { name: 'reactjs', label: 'Rreact.js' },
+  { name: 'nextjs', label: 'Next.js' },
+  { name: 'react-native', label: 'React Native' },
+  { name: 'remixjs', label: 'Remix.js' },
+  { name: 'cypress', label: 'Cypress' },
+  { name: 'playwright', label: 'Playwright' },
+]
