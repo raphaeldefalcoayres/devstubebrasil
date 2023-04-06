@@ -1,7 +1,6 @@
 import { Body } from './body'
 import path from 'path'
 import fs from 'fs'
-import { VideoModel } from '@/@types'
 
 export default async function Page({ params }: { params: { videoId: string } }) {
   const filePath = path.join(process.cwd(), 'data', 'videos.json')

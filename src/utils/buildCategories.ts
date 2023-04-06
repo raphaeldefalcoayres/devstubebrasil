@@ -1,4 +1,3 @@
-import { Category, VideoModel } from '@/@types'
 
 let ITEMS_PER_PAGE: number
 

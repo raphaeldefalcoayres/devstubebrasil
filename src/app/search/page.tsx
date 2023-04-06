@@ -1,8 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 import PageVideosList from '@/components/VideosList'
-import { categoryOrder, menuOptions } from '@/constants'
-import { VideoModel } from '@/@types'
+import { categoryOrder } from '@/constants'
 import MenuTabs from '@/components/MenuTabs'
 
 export default async function SearchPage({ searchParams }: { searchParams: null | { q: string } }) {

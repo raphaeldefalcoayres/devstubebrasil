@@ -2,9 +2,7 @@ import path from 'path'
 import fs from 'fs'
 
 import MenuTabs from '@/components/MenuTabs'
-import VideoCard from '@/components/VideoCard'
 import VideosListCarousel from '@/components/VideosListCarousel'
-import { menuOptions } from '@/constants'
 
 export default async function HomePage() {
   const filePath = path.join(process.cwd(), 'data', 'videos.json')

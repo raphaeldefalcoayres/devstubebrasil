@@ -1,7 +1,5 @@
 'use client'
 
-import { CarouselProps, Category, VideoModel } from '@/@types'
-import { ThumbVideo } from '@/components/ThumbVideo'
 import { buildCategories } from '@/utils/buildCategories'
 import { useEffect, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'

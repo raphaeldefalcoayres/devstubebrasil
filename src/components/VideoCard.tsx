@@ -1,4 +1,3 @@
-import { VideoModel } from '@/@types'
 import { formatDuration, getElapsedTime } from '@/utils'
 import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'

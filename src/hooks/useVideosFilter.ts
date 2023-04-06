@@ -1,4 +1,3 @@
-import { VideoModel } from '@/@types'
 import { categoryOrder } from '@/constants'
 
 export const useVideosFilter = () => {
