@@ -1,4 +1,4 @@
-export interface VideoModel {
+interface VideoModel {
   id: string
   channelId: string
   channelTitle: string
@@ -23,15 +23,4 @@ export interface VideoModel {
   language: string
   createdAt: string
   updatedAt: string
-}
-
-export interface Category {
-  name: string
-  category: string
-  videos: VideoModel[]
-}
-
-export interface CarouselProps {
-  data: VideoModel[]
-  title: string
 }

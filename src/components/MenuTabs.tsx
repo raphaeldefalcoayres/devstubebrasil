@@ -1,6 +1,5 @@
 'use client'
 
-import { VideoModel } from '@/@types'
 import { categoryOrder } from '@/constants'
 import Link from 'next/link'
 import { useState } from 'react'

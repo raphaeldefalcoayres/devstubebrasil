@@ -1,14 +1,11 @@
 'use client'
 
-import { VideoModel } from '@/@types'
 import Spinner from '@/components/Spinner'
-import { ThumbVideo } from '@/components/ThumbVideo'
 import VideoCard from '@/components/VideoCard'
 import { getElapsedTime } from '@/utils'
 import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
+import { useCallback, useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
 
 const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: VideoModel[] }) => {
@@ -16,11 +13,14 @@ const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: Vide
   const [relatedVideosData, setRelatedVideosData] = useState<VideoModel[] | null>()
   const [showMore, setShowMore] = useState(false)
 
-  useEffect(() => {
+  const fetchVideoData = useCallback(() => {
     setVideoData(video)
     setRelatedVideosData(relatedVideos)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [relatedVideos, video])
+
+  useEffect(() => {
+    fetchVideoData()
+  }, [fetchVideoData])
 
   if (!videoData) {
     return (

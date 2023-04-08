@@ -1,9 +1,7 @@
 'use client'
 
-import { VideoModel } from '@/@types'
 import { useSearchParams } from 'next/navigation'
 import Spinner from './Spinner'
-import { ThumbVideo } from './ThumbVideo'
 import { categoryOrder } from '@/constants'
 import VideoCard from './VideoCard'
 

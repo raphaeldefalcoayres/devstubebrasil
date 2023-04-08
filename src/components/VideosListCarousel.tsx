@@ -1,6 +1,5 @@
 'use client'
 
-import { VideoModel } from '@/@types'
 import { useSearchParams } from 'next/navigation'
 import Spinner from './Spinner'
 import { Carousel } from './Carousel'
