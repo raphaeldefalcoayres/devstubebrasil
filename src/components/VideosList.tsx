@@ -1,11 +1,11 @@
 'use client'
 
-import { VideoModel } from '@/@types'
+import { ChannelModel, VideoModel } from '@/@types'
 import { useParams, useSearchParams } from 'next/navigation'
 import Spinner from './Spinner'
 import VideoCard from './VideoCard'
 
-export default function VideoList({ videos }: { videos: VideoModel[] }) {
+export default function VideoList({ videos, channels }: { videos: VideoModel[]; channels: ChannelModel[] }) {
   const params = useParams()
   const search = useSearchParams()
   const searchQuery = search ? search.get('q') : null
@@ -46,17 +46,14 @@ export default function VideoList({ videos }: { videos: VideoModel[] }) {
       ? videos.filter((video) => video.title.toLowerCase().includes(sanitizedSearchTerm))
       : videos
 
-  // if (categoryOrder.includes(sanitizedSearchTerm)) {
-  //   videos = videos.filter((video) => video.category === sanitizedSearchTerm)
-  // } else {
-  //   videos = videos.filter((video) => {
-  //     let sanitizedTitle = video.title.toLowerCase().replace(/\.js/g, 'js')
-  //     if (sanitizedTitle.endsWith('.js')) {
-  //       sanitizedTitle = sanitizedTitle.substring(0, sanitizedTitle.length - 3)
-  //     }
-  //     return sanitizedTitle.includes(sanitizedSearchTerm)
-  //   })
-  // }
+  videos = videos.map((videoMapped) => {
+    const channelFinded = channels.find((channel) => channel.id === videoMapped.channelId)
+    if (channelFinded) {
+      videoMapped.channelLogo = channelFinded?.defaultThumbnailUrl!
+    }
+
+    return videoMapped
+  })
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 gap-4 md:gap-8 w-full relative">

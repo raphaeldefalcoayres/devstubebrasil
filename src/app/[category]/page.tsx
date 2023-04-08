@@ -10,17 +10,19 @@ export default async function SearchPage({ params }: { params: null | { category
   const filePath = path.join(process.cwd(), 'data', 'videos.json')
   const fileContents = await fs.promises.readFile(filePath, 'utf8')
   const videos: VideoModel[] = JSON.parse(fileContents)
+
+  const channelsFilePath = path.join(process.cwd(), 'data', 'channels.json')
+  const channelsFileContents = await fs.promises.readFile(channelsFilePath, 'utf8')
+  const channels = JSON.parse(channelsFileContents)
+
   const categorySelected =
     params?.category && categoryOrder.includes(decodeURI(params?.category)) ? decodeURI(params?.category) : ''
-
   let subcategorySelected
-
   if (params?.subcategory) {
     subcategorySelected = decodeURI(params?.category)
   } else {
     subcategorySelected = ''
   }
-
   const subcategories = subCategoryOrder.find((category) => category.name === decodeURI(params?.category!))
 
   if (!videos) return 'loading...'
@@ -35,7 +37,7 @@ export default async function SearchPage({ params }: { params: null | { category
         subcategorySelected={subcategorySelected}
       />
       <div className="md:flex-1 w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto h-[70vh] md:max-h-[calc(100vh-270px)]">
-        <PageVideosList videos={videos} />
+        <PageVideosList videos={videos} channels={channels} />
       </div>
     </div>
   )

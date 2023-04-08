@@ -1,10 +1,19 @@
-import { VideoModel } from '@/@types'
+import { ChannelModel, VideoModel } from '@/@types'
 import { ReadonlyURLSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useVideosFilter } from './useVideosFilter'
 import { categoryOrder } from '@/constants'
+import { channel } from 'diagnostics_channel'
 
-export const useVideoList = ({ videos, search }: { videos: VideoModel[]; search: ReadonlyURLSearchParams }) => {
+export const useVideoList = ({
+  videos,
+  channels,
+  search,
+}: {
+  videos: VideoModel[]
+  channels: ChannelModel[]
+  search: ReadonlyURLSearchParams
+}) => {
   const { filter } = useVideosFilter()
   const [videosData, setVideosData] = useState<VideoModel[]>()
   const searchQuery = search ? search.get('q') : null
@@ -26,7 +35,14 @@ export const useVideoList = ({ videos, search }: { videos: VideoModel[]; search:
       return aCategoryIndex - bCategoryIndex
     })
 
-    console.log(sortedVideos)
+    sortedVideos = sortedVideos.map((videoMapped) => {
+      const channelFinded = channels.find((channel) => channel.id === videoMapped.channelId)
+      if (channelFinded) {
+        videoMapped.channelLogo = channelFinded?.defaultThumbnailUrl!
+      }
+
+      return videoMapped
+    })
 
     return sortedVideos?.reduce((acc: { [x: string]: any[] }, video: VideoModel) => {
       const category = video.category || 'Outros'

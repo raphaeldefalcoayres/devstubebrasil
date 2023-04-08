@@ -19,8 +19,8 @@ export default function VideoCard({ video, className }: { video: VideoModel; cla
         </div>
       </Link>
       <div className="flex gap-2 w-full">
-        <div className="w-8 h-8 rounded-xl relative overflow-hidden">
-          <Image fill={true} src={video.channelLogo} alt="channel thumb" />
+        <div className="w-8 h-8 rounded-xl relative overflow-hidden border-2 border-gray-900">
+          <Image fill={true} src={video.channelLogo} alt={`imagem do canal ${video.channelTitle}`} />
         </div>
         <div className="flex flex-col gap-1 leading-4 w-[80%]">
           <strong className="truncate w-full" title={video.title}>

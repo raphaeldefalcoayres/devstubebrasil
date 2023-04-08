@@ -93,6 +93,7 @@ export const subCategoryOrder = [
       'next.js',
       'react native',
       'remix.js',
+      'vue.js',
     ],
   },
   {

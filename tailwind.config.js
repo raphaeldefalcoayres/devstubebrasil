@@ -126,6 +126,7 @@ module.exports = {
         background: '#0a0b0c',
         sidebar: '#101113',
         content: '#151719',
+        content2: '#31363A',
         primary_light: '#c1c9f3',
       },
     },

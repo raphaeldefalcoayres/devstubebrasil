@@ -73,7 +73,7 @@ export default function MenuTabs({ data, selected }: MenuTabsProps) {
             }`}
             onClick={() => setSelectedTab(option.name)}
           >
-            <span className="uppercase">{option.name}</span>
+            <span className="uppercase whitespace-nowrap">{option.name}</span>
             <span
               className={` text-sm py-1 px-2 rounded-lg ${
                 selectedTab === option.name ? 'text-white bg-blue-500' : 'text-gray-800 bg-gray-600'

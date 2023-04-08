@@ -19,9 +19,6 @@ interface CategoryCount {
 
 export default function MenuSubTabs({ data, videos, categorySelected, subcategorySelected }: MenuSubTabsProps) {
   const [selectedTab, setSelectedTab] = useState(subcategorySelected)
-
-  console.log(data)
-
   const categoryCounts = []
   let totalTotal = 0
 
@@ -45,7 +42,7 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
   }
 
   return (
-    <div className="text-sm font-medium text-center text-primary_light -mt-4 -mb-4">
+    <div className="text-sm font-medium text-center text-primary_light md:-mt-4 md:-mb-4">
       <ul className="flex md:flex-wrap -mb-px overflow-x-auto justify-around">
         <Link
           href={`/${categorySelected}`}
@@ -73,7 +70,7 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
             }`}
             onClick={() => setSelectedTab(option.name)}
           >
-            <span className="uppercase">{option.name}</span>
+            <span className="uppercase whitespace-nowrap">{option.name}</span>
             <span
               className={` text-sm py-1 px-2 rounded-lg ${
                 selectedTab === option.name ? 'text-white bg-white/30' : 'text-gray-800 bg-white/30'

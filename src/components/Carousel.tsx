@@ -55,14 +55,14 @@ const Carousel = ({ data, title }: CarouselProps) => {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="w-full flex items-center justify-between">
-        <h2 className="mb-4 font-semibold text-xl uppercase flex items-center gap-2">{title}</h2>
+      <div className="w-full flex items-center justify-between mb-4">
+        <h2 className="font-semibold text-md md:text-xl uppercase flex items-center gap-2">{title}</h2>
         <div>
           <button className="disabled:opacity-50" disabled={!hasPreviousPage} onClick={handlePreviousPage}>
-            <FaChevronLeft className="w-6 h-6" />
+            <FaChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
           <button className="disabled:opacity-50" disabled={!hasNextPage} onClick={handleNextPage}>
-            <FaChevronRight className="w-6 h-6" />
+            <FaChevronRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </div>
       </div>

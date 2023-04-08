@@ -1,6 +1,8 @@
 'use client'
 
 import { VideoModel } from '@/@types'
+import ExtraVideoItem from '@/components/ExtraVideo'
+import PlaylistItem from '@/components/PlaylistItem'
 import Spinner from '@/components/Spinner'
 import { ThumbVideo } from '@/components/ThumbVideo'
 import VideoCard from '@/components/VideoCard'
@@ -42,7 +44,7 @@ const Body = ({
 
   return (
     <div className="flex md:flex-row flex-col gap-4 md:gap-8">
-      <div className="md:w-[60vw] w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-200px)]">
+      <div className="md:w-[60vw] w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-160px)]">
         <div className="w-full h-full">
           <div className="w-full h-[50vw] md:h-[30vw] rounded-xl overflow-hidden">
             <ReactPlayer
@@ -54,7 +56,7 @@ const Body = ({
           </div>
           <div className="flex w-full flex-col mt-4">
             <div className="flex pt-3 pb-2 gap-4">
-              <div className="w-8 h-8 rounded-xl relative overflow-hidden">
+              <div className="w-8 h-8 rounded-lg relative overflow-hidden">
                 <Image fill={true} src={video.channelLogo} alt="channel thumb" />
               </div>
               <div className="flex flex-col gap-1 leading-4 w-[80%]">
@@ -68,45 +70,37 @@ const Body = ({
                   </small>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-start -mt-3">
-                {/* <button className="text-[#2D3668] hover:text-[#4f5a99]">
-                <FaChevronUp className="w-6 h-6" />
-              </button>
-              <strong className="font-semibold text-sm" title="Relevancia">
-                {videoData.relevance}
-              </strong>
-              <button className="text-[#682D2D] hover:text-[#aa5959]">
-                <FaChevronDown className="w-6 h-6" />
-              </button> */}
-              </div>
             </div>
-            <div className={`${!showMore ? 'line-clamp-3' : ''} leading-6`}>{videoData.description}</div>
+            <div className={`${!showMore ? 'line-clamp-5' : ''} leading-6`}>{videoData.description}</div>
             <button className="text-left font-semibold" onClick={() => setShowMore(!showMore)}>
               Ver {!showMore ? 'mais' : 'menos'}
             </button>
           </div>
         </div>
       </div>
-      <div className="w-full md:flex-1 bg-sidebar rounded-xl overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-200px)]">
+      <div className="w-full md:flex-1 bg-sidebar rounded-xl overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-160px)]">
         <div className="flex flex-1 flex-col h-full ">
-          <div className="h-full overflow-x-hidden overflow-y-auto p-4 md:p-8 md:gap-8 gap-4 grid grid-cols-1">
+          <div className="h-full  p-4 md:p-8 md:gap-8 gap-4 grid grid-cols-1">
             {video.type === 'single' && relatedVideosData && (
               <>
                 <h2>Outros vídeos como esse</h2>
-                {relatedVideosData.map((relatedVideo: VideoModel) => (
-                  <VideoCard key={relatedVideo.videoId} video={relatedVideo} />
-                ))}
+                <div className="overflow-x-hidden overflow-y-auto">
+                  {relatedVideosData.map((relatedVideo: VideoModel) => (
+                    <ExtraVideoItem key={relatedVideo.videoId} video={relatedVideo} />
+                  ))}
+                </div>
               </>
             )}
             {video.type === 'list' && playlistData && (
               <>
                 <h2>Playlist</h2>
-                {playlistData
-                  .sort((a, b) => a.position - b.position)
-                  .slice(1, playlistData.length)
-                  .map((playlistVideo: VideoModel) => (
-                    <VideoCard key={playlistVideo.videoId} video={playlistVideo} />
-                  ))}
+                <div className="bg-black rounded-xl p-4 overflow-x-hidden overflow-y-auto">
+                  {playlistData
+                    .sort((a, b) => a.position - b.position)
+                    .map((playlistVideo: VideoModel) => (
+                      <PlaylistItem key={playlistVideo.videoId} video={playlistVideo} selected={video.videoId} />
+                    ))}
+                </div>
               </>
             )}
           </div>

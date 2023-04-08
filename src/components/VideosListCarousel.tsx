@@ -1,14 +1,14 @@
 'use client'
 
-import { VideoModel } from '@/@types'
+import { ChannelModel, VideoModel } from '@/@types'
 import { useSearchParams } from 'next/navigation'
 import Spinner from './Spinner'
 import { Carousel } from './Carousel'
 import { useVideoList } from '@/hooks'
 
-export default function VideosListCarousel({ videos }: { videos: VideoModel[] }) {
+export default function VideosListCarousel({ videos, channels }: { videos: VideoModel[]; channels: ChannelModel[] }) {
   const search = useSearchParams()
-  const { videosData, videosByCategory } = useVideoList({ videos: videos, search })
+  const { videosData, videosByCategory } = useVideoList({ videos, channels, search })
 
   if (!videosData) {
     return (
