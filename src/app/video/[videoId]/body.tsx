@@ -11,14 +11,24 @@ import { useEffect, useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import ReactPlayer from 'react-player'
 
-const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: VideoModel[] }) => {
+const Body = ({
+  video,
+  playlist,
+  relatedVideos,
+}: {
+  video: VideoModel
+  playlist?: VideoModel[]
+  relatedVideos?: VideoModel[]
+}) => {
   const [videoData, setVideoData] = useState<VideoModel | null>()
   const [relatedVideosData, setRelatedVideosData] = useState<VideoModel[] | null>()
+  const [playlistData, setPlaylistData] = useState<VideoModel[] | null>()
   const [showMore, setShowMore] = useState(false)
 
   useEffect(() => {
     setVideoData(video)
     setRelatedVideosData(relatedVideos)
+    setPlaylistData(playlist)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -80,10 +90,25 @@ const Body = ({ video, relatedVideos }: { video: VideoModel; relatedVideos: Vide
       <div className="w-full md:flex-1 bg-sidebar rounded-xl overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-200px)]">
         <div className="flex flex-1 flex-col h-full ">
           <div className="h-full overflow-x-hidden overflow-y-auto p-4 md:p-8 md:gap-8 gap-4 grid grid-cols-1">
-            {relatedVideosData &&
-              relatedVideosData.map((relatedVideo: VideoModel) => (
-                <VideoCard key={relatedVideo.videoId} video={relatedVideo} />
-              ))}
+            {video.type === 'single' && relatedVideosData && (
+              <>
+                <h2>Outros vídeos como esse</h2>
+                {relatedVideosData.map((relatedVideo: VideoModel) => (
+                  <VideoCard key={relatedVideo.videoId} video={relatedVideo} />
+                ))}
+              </>
+            )}
+            {video.type === 'list' && playlistData && (
+              <>
+                <h2>Playlist</h2>
+                {playlistData
+                  .sort((a, b) => a.position - b.position)
+                  .slice(1, playlistData.length)
+                  .map((playlistVideo: VideoModel) => (
+                    <VideoCard key={playlistVideo.videoId} video={playlistVideo} />
+                  ))}
+              </>
+            )}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 
@@ -8,6 +8,7 @@ export default function Header() {
   const search = useSearchParams()
   const [searchQuery, setSearchQuery] = useState<string | null>(search ? search.get('q') : '')
   const router = useRouter()
+  const pathname = usePathname()
 
   const onSearch = (event: React.FormEvent) => {
     event.preventDefault()
@@ -17,7 +18,7 @@ export default function Header() {
     }
 
     const encodedSearchQuery = encodeURI(searchQuery)
-    router.push(`/search?q=${encodedSearchQuery}`)
+    router.push(`${pathname}?q=${encodedSearchQuery}`)
   }
 
   return (

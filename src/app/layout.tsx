@@ -28,9 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="md:p-8">
           <div className="md:overflow-hidden rounded-xl w-full h-full flex md:flex-row flex-col">
             <Sidebar />
-            <div className="flex-1 h-full bg-content flex flex-col gap-4 md:gap-8 md:p-8 p-4">
+            <div className="flex-1 h-full bg-content flex flex-col gap-4 md:gap-8 md:pr-8 md:pl-8 md:pb-8 p-4">
               <Header />
-              <div className="h-full md:flex-1 mt-8">{children}</div>
+              <div className="h-full md:flex-1 mt-4">{children}</div>
             </div>
           </div>
         </div>

@@ -35,13 +35,13 @@ export default function Sidebar() {
         >
           <BiHomeAlt2 className="w-6 h-6" /> {open && <strong className="hidden md:flex">Home</strong>}
         </Link>
-        <button
+        {/* <button
           className={`text-primary_light/50 hover:text-primary_light ${open ? 'flex gap-2' : 'tooltip'} `}
           data-tooltip="Cursos"
           title="Cursos"
         >
           <RiPlayList2Fill className="w-6 h-6" /> {open && <strong className="hidden md:flex">Cursos</strong>}
-        </button>
+        </button> */}
       </div>
     </div>
   )

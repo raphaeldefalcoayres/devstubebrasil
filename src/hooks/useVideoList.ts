@@ -12,7 +12,11 @@ export const useVideoList = ({ videos, search }: { videos: VideoModel[]; search:
   const [videosByCategory, setVideosByCategory] = useState<{ [x: string]: any[] | null }>()
 
   function generateVideosByCategory({ videos }: { videos: VideoModel[] }) {
-    let sortedVideos = videos.sort((a, b) => {
+    const singleVideos = videos.filter(
+      (video) => video.type === 'single' || (video.type === 'list' && video.position === 1)
+    )
+
+    let sortedVideos = singleVideos.sort((a, b) => {
       return new Date(b.publishTime).getTime() - new Date(a.publishTime).getTime()
     })
 
@@ -21,6 +25,8 @@ export const useVideoList = ({ videos, search }: { videos: VideoModel[]; search:
       const bCategoryIndex = categoryOrder.indexOf(b.category)
       return aCategoryIndex - bCategoryIndex
     })
+
+    console.log(sortedVideos)
 
     return sortedVideos?.reduce((acc: { [x: string]: any[] }, video: VideoModel) => {
       const category = video.category || 'Outros'

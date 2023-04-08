@@ -7,9 +7,14 @@ import Link from 'next/link'
 export default function VideoCard({ video, className }: { video: VideoModel; className?: string }) {
   return (
     <div className={`flex flex-col gap-4 ${className}`}>
-      <Link href={`/${video.videoId}`} className="w-full h-44 overflow-hidden rounded-xl relative">
+      <Link href={`/video/${video.videoId}`} className="w-full h-44 overflow-hidden rounded-xl relative">
         <Image fill={true} className="object-cover" src={video.thumbnail} alt="thumb" />
-        <div className="absolute right-0 bottom-0 bg-black/50 rounded-br-xl rounded-tl-xl px-2 text-xs py-1 font-semibold">
+        {video.type === 'list' && (
+          <div className="absolute top-0 left-0 bg-black/70 rounded-br-xl rounded-tl-xl px-2 text-xs py-1 font-semibold">
+            {video.position === 1 ? 'Playlist' : video.position}
+          </div>
+        )}
+        <div className="absolute right-0 bottom-0 bg-black/70 rounded-br-xl rounded-tl-xl px-2 text-xs py-1 font-semibold">
           {formatDuration(video.duration)}
         </div>
       </Link>

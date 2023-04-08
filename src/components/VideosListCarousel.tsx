@@ -8,8 +8,7 @@ import { useVideoList } from '@/hooks'
 
 export default function VideosListCarousel({ videos }: { videos: VideoModel[] }) {
   const search = useSearchParams()
-
-  const { videosData, videosByCategory } = useVideoList({ videos, search })
+  const { videosData, videosByCategory } = useVideoList({ videos: videos, search })
 
   if (!videosData) {
     return (

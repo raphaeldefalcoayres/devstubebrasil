@@ -18,8 +18,11 @@ export interface VideoModel {
   relevance: number
   tags: string
   topics: string
+  type: string
   segment: string
   category: string
+  subcategory: string
+  position: number
   language: string
   createdAt: string
   updatedAt: string

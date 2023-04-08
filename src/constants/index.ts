@@ -75,28 +75,40 @@ export const tagsDefine = [
   'sair do zero',
 ]
 
-export const categoryOrder = [
-  'html',
-  'css',
-  'tailwindcss',
-  'javascript',
-  'typescript',
-  'react.js',
-  'next.js',
-  'react native',
-  'node.js',
-]
-
-export const menuOptions = [
-  { name: 'html', label: 'HTML' },
-  { name: 'css', label: 'CSS' },
-  { name: 'tailwindcss', label: 'Tailwindcss' },
-  { name: 'javascript', label: 'Javascript' },
-  { name: 'typescript', label: 'Typescript' },
-  { name: 'reactjs', label: 'React.js' },
-  { name: 'nextjs', label: 'Next.js' },
-  { name: 'react-native', label: 'React Native' },
-  { name: 'remixjs', label: 'Remix.js' },
-  { name: 'cypress', label: 'Cypress' },
-  { name: 'playwright', label: 'Playwright' },
+export const categoryOrder = ['lógica de programação', 'frontend', 'backend', 'mobile', 'banco de dados', 'teste']
+export const subCategoryOrder = [
+  {
+    name: 'lógica de programação',
+    subcategories: ['lógica de programação'],
+  },
+  {
+    name: 'frontend',
+    subcategories: [
+      'html',
+      'css',
+      'tailwindcss',
+      'javascript',
+      'typescript',
+      'react.js',
+      'next.js',
+      'react native',
+      'remix.js',
+    ],
+  },
+  {
+    name: 'backend',
+    subcategories: ['node.js'],
+  },
+  {
+    name: 'mobile',
+    subcategories: ['react native', 'flutter'],
+  },
+  {
+    name: 'banco de dados',
+    subcategories: ['mongodb', 'mysql', 'postgresql'],
+  },
+  {
+    name: 'teste',
+    subcategories: ['cypress.js', 'playwright', 'vitest', 'jest'],
+  },
 ]
