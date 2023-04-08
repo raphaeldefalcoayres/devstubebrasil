@@ -23,7 +23,12 @@ export default function PlaylistItem({
       </div>
       <div className="relative rounded-xl overflow-hidden w-44 h-14">
         <div className="w-24 h-20">
-          <Image fill={true} className="object-cover" src={video.thumbnail} alt="thumb" />
+          <Image
+            fill={true}
+            className="object-cover"
+            src={video.thumbnail}
+            alt={`imagem de capa do vídeo ${video.title}`}
+          />
         </div>
         <div className="absolute right-0 bottom-0 bg-black/70 rounded-br-xl rounded-tl-xl px-2 text-xs py-1 font-semibold">
           {formatDuration(video.duration)}

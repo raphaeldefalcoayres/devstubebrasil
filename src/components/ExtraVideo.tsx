@@ -20,7 +20,12 @@ export default function ExtraVideoItem({
     >
       <div className="relative rounded-xl w-64 h-20 overflow-hidden">
         <div className="w-36 h-36">
-          <Image fill={true} className="object-cover" src={video.thumbnail} alt="thumb" />
+          <Image
+            fill={true}
+            className="object-cover"
+            src={video.thumbnail}
+            alt={`imagem de capa do vídeo ${video.title}`}
+          />
         </div>
 
         <div className="absolute right-0 bottom-0 bg-black/70 rounded-br-xl rounded-tl-xl px-2 text-xs py-1 font-semibold">

@@ -7,7 +7,12 @@ export default function VideoCard({ video, className }: { video: VideoModel; cla
   return (
     <div className={`flex flex-col gap-4 ${className}`}>
       <Link href={`/video/${video.videoId}`} className="w-full h-44 overflow-hidden rounded-xl relative">
-        <Image fill={true} className="object-cover" src={video.thumbnail} alt="thumb" />
+        <Image
+          fill={true}
+          className="object-cover"
+          src={video.thumbnail}
+          alt={`imagem de capa do vídeo ${video.title}`}
+        />
         {video.type === 'list' && (
           <div className="absolute top-0 left-0 bg-black/70 rounded-br-xl rounded-tl-xl px-2 text-xs py-1 font-semibold">
             {video.position === 1 ? 'Playlist' : video.position}

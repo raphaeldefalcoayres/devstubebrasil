@@ -26,7 +26,12 @@ const ThumbVideo = ({ video, className = '' }: ThumbVideoProps) => {
   return (
     <div className={`flex flex-col ${className}`}>
       <Link href={`/${videoData.videoId}`} className="w-full h-52 overflow-hidden rounded-xl relative">
-        <Image fill={true} className="object-cover" src={videoData.thumbnail} alt="thumb" />
+        <Image
+          fill={true}
+          className="object-cover"
+          src={videoData.thumbnail}
+          alt={`imagem de capa do vídeo ${video.title}`}
+        />
         <div className="absolute z-10 right-2 bottom-2 bg-black/70 rounded-lg text-xs p-1">
           {formatDuration(videoData.duration)}
         </div>
