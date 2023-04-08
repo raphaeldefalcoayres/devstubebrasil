@@ -3,7 +3,6 @@
 import { FaYoutube } from 'react-icons/fa'
 import { FiMenu } from 'react-icons/fi'
 import { BiHomeAlt2 } from 'react-icons/bi'
-import { RiPlayList2Fill } from 'react-icons/ri'
 import { useState } from 'react'
 import Link from 'next/link'
 

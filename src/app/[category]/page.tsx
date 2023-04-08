@@ -2,7 +2,6 @@ import path from 'path'
 import fs from 'fs'
 import PageVideosList from '@/components/VideosList'
 import { categoryOrder, subCategoryOrder } from '@/constants'
-import { VideoModel } from '@/@types'
 import MenuTabs from '@/components/MenuTabs'
 import MenuSubTabs from '@/components/MenuSubTabs'
 

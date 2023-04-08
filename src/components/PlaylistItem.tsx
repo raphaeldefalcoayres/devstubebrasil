@@ -1,6 +1,4 @@
-import { VideoModel } from '@/@types'
-import { formatDuration, getElapsedTime } from '@/utils'
-import { formatViewCount } from '@/utils/buildCategories'
+import { formatDuration } from '@/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 

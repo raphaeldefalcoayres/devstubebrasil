@@ -3,7 +3,6 @@
 import ExtraVideoItem from '@/components/ExtraVideo'
 import PlaylistItem from '@/components/PlaylistItem'
 import Spinner from '@/components/Spinner'
-import VideoCard from '@/components/VideoCard'
 import { getElapsedTime } from '@/utils'
 import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
