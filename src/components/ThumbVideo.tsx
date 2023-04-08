@@ -1,12 +1,10 @@
 'use client'
 
-import { VideoModel } from '@/@types'
 import { formatDuration, getElapsedTime } from '@/utils'
 import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
 interface ThumbVideoProps {
   video: VideoModel

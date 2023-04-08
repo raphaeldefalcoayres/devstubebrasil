@@ -1,8 +1,8 @@
 'use client'
 
-import { ChannelModel, VideoModel } from '@/@types'
 import { useParams, useSearchParams } from 'next/navigation'
 import Spinner from './Spinner'
+import { categoryOrder } from '@/constants'
 import VideoCard from './VideoCard'
 
 export default function VideoList({ videos, channels }: { videos: VideoModel[]; channels: ChannelModel[] }) {

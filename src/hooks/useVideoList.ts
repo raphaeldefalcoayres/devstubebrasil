@@ -1,4 +1,3 @@
-import { ChannelModel, VideoModel } from '@/@types'
 import { ReadonlyURLSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useVideosFilter } from './useVideosFilter'
