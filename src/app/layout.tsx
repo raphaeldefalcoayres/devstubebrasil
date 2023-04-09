@@ -16,6 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className="relative">
+      <head>
+        <Analytics />
+      </head>
       <body>
         <div className="text-xs font-thin h-fit text-white bg-blue-900 text-center absolute top-0 left-0 w-full px-4">
           <span className="hidden md:block">
@@ -35,7 +38,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </div>
-        <Analytics />
       </body>
     </html>
   )
