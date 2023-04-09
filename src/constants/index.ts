@@ -75,7 +75,15 @@ export const tagsDefine = [
   'sair do zero',
 ]
 
-export const categoryOrder = ['lógica de programação', 'frontend', 'backend', 'mobile', 'banco de dados', 'teste']
+export const categoryOrder = [
+  'lógica de programação',
+  'frontend',
+  'backend',
+  'mobile',
+  'banco de dados',
+  'teste',
+  'ferramentas',
+]
 export const subCategoryOrder = [
   {
     name: 'lógica de programação',
@@ -98,7 +106,7 @@ export const subCategoryOrder = [
   },
   {
     name: 'backend',
-    subcategories: ['node.js'],
+    subcategories: ['node.js', 'nest.js', 'go', 'php'],
   },
   {
     name: 'mobile',
@@ -111,5 +119,9 @@ export const subCategoryOrder = [
   {
     name: 'teste',
     subcategories: ['cypress.js', 'playwright', 'vitest', 'jest'],
+  },
+  {
+    name: 'ferramentas',
+    subcategories: ['terminal', 'git', 'vscode', 'docker'],
   },
 ]

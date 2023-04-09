@@ -10,11 +10,6 @@ type MenuSubTabsProps = {
   subcategorySelected?: string
 }
 
-interface CategoryCount {
-  name: string
-  total: number
-}
-
 export default function MenuSubTabs({ data, videos, categorySelected, subcategorySelected }: MenuSubTabsProps) {
   const [selectedTab, setSelectedTab] = useState(subcategorySelected)
   const categoryCounts = []

@@ -16,6 +16,9 @@ Demo: [https://devstubebrasil.vercel.app/](https://devstubebrasil.vercel.app/)
 
 - [x] Lista de vídeos de 2019 a 2023 organizados por categoria (HTML, CSS, TailwindCSS, JavaScript, TypeScript, React.js, Next.js, React Native, Node.js).
 - [x] Filtro de vídeos por palavra-chave.
+- [x] Segmentação por categoria e subcategoria.
+- [x] mais de 2000 vídeos
+- [x] Playlists (cursos)
 - [ ] Lista de vídeos assistidos
 - [ ] Lista de vídeos relevantes
 - [ ] Autenticação com GitHub.
