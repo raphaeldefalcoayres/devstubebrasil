@@ -1,15 +1,16 @@
-
 let ITEMS_PER_PAGE: number
 
 if (typeof window !== 'undefined') {
   if (window.outerWidth > 1920) {
-    ITEMS_PER_PAGE = 7 // 2 XL size
+    ITEMS_PER_PAGE = 5 // 2 XL size
   } else if (window.outerWidth === 1920) {
-    ITEMS_PER_PAGE = 6 // XL size
+    ITEMS_PER_PAGE = 5 // XL size
+  } else if (window.outerWidth >= 1200) {
+    ITEMS_PER_PAGE = 3 // MD size
   } else if (window.outerWidth >= 1024) {
-    ITEMS_PER_PAGE = 4 // MD size
-  } else if (window.outerWidth >= 800) {
-    ITEMS_PER_PAGE = 3 // SM size
+    ITEMS_PER_PAGE = 2 // MD size
+  } else if (window.outerWidth >= 700) {
+    ITEMS_PER_PAGE = 2 // SM size
   } else {
     ITEMS_PER_PAGE = 1 // XS size (default)
   }

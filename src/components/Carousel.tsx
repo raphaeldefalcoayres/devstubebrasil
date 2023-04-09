@@ -64,7 +64,7 @@ const Carousel = ({ data, title }: CarouselProps) => {
           </button>
         </div>
       </div>
-      <div className="w-full flex-wrap grid grid-cols-1 xl:grid-cols-4 3xl:grid-cols-6 4xl:grid-cols-7 md:gap-8 gap-4 relative">
+      <div className="w-full flex-wrap grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-5 4xl:grid-cols-5 md:gap-8 gap-4 relative">
         {thumbsVideosData[currentPage]?.videos.map((video: VideoModel) => (
           <VideoCard key={video.videoId} video={video} />
         ))}

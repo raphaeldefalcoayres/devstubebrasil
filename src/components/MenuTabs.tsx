@@ -43,7 +43,7 @@ export default function MenuTabs({ data, selected }: MenuTabsProps) {
 
   return (
     <div className="h-[54px] w-full flex text-sm font-medium text-center text-primary_light border-b border-primary_light dark:text-gray-400 dark:border-gray-700">
-      <ul className="flex -mb-px w-[88vw] overflow-x-auto xl:justify-around justify-start overflow-y-hidden scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
+      <ul className="flex -mb-px w-[88vw] lg:w-[85vw] overflow-x-auto xl:justify-around justify-end overflow-y-hidden scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
         <Link
           href={`/`}
           className={`text-center py-4 px-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300${
