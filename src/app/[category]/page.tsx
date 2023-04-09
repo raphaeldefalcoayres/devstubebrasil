@@ -35,7 +35,7 @@ export default async function SearchPage({ params }: { params: null | { category
         categorySelected={categorySelected}
         subcategorySelected={subcategorySelected}
       />
-      <div className="md:flex-1 w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto h-[70vh] md:max-h-[calc(100vh-270px)]">
+      <div className="md:flex-1 w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto h-[70vh] lg:max-h-[calc(100vh-220px)] xl:max-h-[calc(100vh-270px)]">
         <PageVideosList videos={videos} channels={channels} />
       </div>
     </div>

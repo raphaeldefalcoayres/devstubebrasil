@@ -35,8 +35,8 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
   }
 
   return (
-    <div className="text-sm font-medium text-center text-primary_light md:-mt-4 md:-mb-4">
-      <ul className="flex md:flex-wrap -mb-px overflow-x-auto justify-around">
+    <div className="text-sm w-full font-medium text-center text-primary_light md:-mt-4 md:-mb-4 flex">
+      <ul className="lg:w-[88vw] overflow-x-auto xl:justify-around lg:justify-start flex overflow-y-hidden">
         <Link
           href={`/${categorySelected}`}
           className={`text-center text-sm pl-2 py-1 border-transparent rounded-lg hover:bg-blue-500 ${

@@ -29,14 +29,14 @@ main {
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  background-color: #1f2937; /* Cor de fundo da scrollbar */
+  background-color: #0f1316; /* Cor de fundo da scrollbar */
 }
 
 /* Thumb da barra de rolagem */
 ::-webkit-scrollbar-thumb {
-  background-color: #4b5563; /* Cor do thumb da scrollbar */
+  background-color: #1a1f24; /* Cor do thumb da scrollbar */
   border-radius: 10px; /* Raio do border do thumb */
-  border: 2px solid #1f2937; /* Cor e tamanho da borda do thumb */
+  border: 2px solid #1a1f24; /* Cor e tamanho da borda do thumb */
 }
 
 .tooltip {

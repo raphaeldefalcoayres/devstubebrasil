@@ -75,18 +75,10 @@ export const tagsDefine = [
   'sair do zero',
 ]
 
-export const categoryOrder = [
-  'lógica de programação',
-  'frontend',
-  'backend',
-  'mobile',
-  'banco de dados',
-  'teste',
-  'ferramentas',
-]
+export const categoryOrder = ['lógica', 'frontend', 'backend', 'mobile', 'banco de dados', 'teste', 'ferramentas']
 export const subCategoryOrder = [
   {
-    name: 'lógica de programação',
+    name: 'lógica',
     subcategories: ['lógica de programação'],
   },
   {
