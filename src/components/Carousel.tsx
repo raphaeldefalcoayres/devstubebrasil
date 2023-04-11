@@ -52,7 +52,7 @@ const Carousel = ({ data, title }: CarouselProps) => {
   }, [currentPage])
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full pb-8">
       <div className="w-full flex items-center justify-between mb-4">
         <h2 className="font-semibold text-md md:text-xl uppercase flex items-center gap-2">{title}</h2>
         <div>
