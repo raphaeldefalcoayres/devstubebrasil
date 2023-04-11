@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Este é um site <b>beta</b> com alguns dados de vídeos youtube
           </span>
         </div>
-        <div className="lg:p-4 xl:p-8 border-2 h-screen">
+        <div className="lg:p-4 xl:p-8 h-screen">
           <div className="rounded-xl overflow-hidden h-full grid template">
             <Sidebar />
             <div className="content bg-content p-4 xl:p-8 overflow-hidden grid gap-4 xl:gap-6">
