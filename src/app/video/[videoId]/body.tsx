@@ -42,10 +42,10 @@ const Body = ({
   }
 
   return (
-    <div className="flex md:flex-row flex-col gap-4 md:gap-8">
-      <div className="md:w-[60vw] w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-160px)]">
-        <div className="w-full h-full">
-          <div className="w-full h-[50vw] md:h-[30vw] rounded-xl overflow-hidden">
+    <div className="flex md:flex-row flex-col gap-4 md:gap-4 h-full">
+      <div className="md:w-[60vw] w-full md:h-full bg-sidebar rounded-xl p-4 md:p-4 md:gap-4 gap-4 overflow-x-hidden md:overflow-y-auto">
+        <div className="md:w-full md:h-full">
+          <div className="md:w-full h-[48vw] md:h-[32.8vw] rounded-xl overflow-hidden">
             <ReactPlayer
               controls={true}
               width={'100%'}
@@ -58,7 +58,7 @@ const Body = ({
               <div className="w-8 h-8 rounded-lg relative overflow-hidden">
                 <Image fill={true} src={video.channelLogo} alt="channel thumb" />
               </div>
-              <div className="flex flex-col gap-1 leading-4 w-[80%]">
+              <div className="flex flex-col gap-1 leading-4 w-[69vw] md:w-[80%]">
                 <strong className="truncate w-full" title={video.title}>
                   {video.title}
                 </strong>
@@ -70,16 +70,16 @@ const Body = ({
                 </div>
               </div>
             </div>
-            <div className={`${!showMore ? 'line-clamp-5' : ''} leading-6`}>{videoData.description}</div>
+            <div className={`${!showMore ? 'line-clamp-2' : ''} leading-6`}>{videoData.description}</div>
             <button className="text-left font-semibold" onClick={() => setShowMore(!showMore)}>
               Ver {!showMore ? 'mais' : 'menos'}
             </button>
           </div>
         </div>
       </div>
-      <div className="w-full md:flex-1 bg-sidebar rounded-xl overflow-x-hidden md:overflow-y-auto md:h-[calc(100vh-160px)]">
+      <div className="w-full md:flex-1 bg-sidebar rounded-xl overflow-x-hidden md:overflow-y-auto">
         <div className="flex flex-1 flex-col h-full ">
-          <div className="h-full  p-4 md:p-8 md:gap-8 gap-4 grid grid-cols-1">
+          <div className="h-full p-4 md:p-4 md:gap-4 gap-4 grid grid-cols-1">
             {video.type === 'single' && relatedVideosData && (
               <>
                 <h2>Outros vídeos como esse</h2>

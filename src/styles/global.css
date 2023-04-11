@@ -97,7 +97,6 @@ main {
 }
 
 .content {
-  grid-area: 'main2';
   grid-template-areas:
     'header'
     'menu'
@@ -105,6 +104,13 @@ main {
     'content';
 
   grid-template-rows: 36px 64px 1fr;
+}
+
+.video-content {
+  grid-template-areas:
+    'header'
+    'video-content' !important;
+  grid-template-rows: 36px calc(100vh - 190px) !important;
 }
 
 .menu-container {
@@ -136,6 +142,13 @@ main {
   .menu-container {
     width: calc(100vw - 36px);
     justify-content: start !important;
+  }
+
+  .video-content {
+    grid-template-areas:
+      'header'
+      'video-content' !important;
+    grid-template-rows: 36px 1fr !important;
   }
 }
 
