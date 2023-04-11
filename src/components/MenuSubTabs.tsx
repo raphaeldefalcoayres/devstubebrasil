@@ -35,13 +35,11 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
   }
 
   return (
-    <div className="text-sm w-full font-medium text-center text-primary_light md:-mt-4 md:-mb-4 flex">
-      <ul className="w-[88vw] lg:w-[85vw] overflow-x-auto xl:justify-around justify-start flex overflow-y-hidden">
+    <div className="">
+      <ul className="menu-container">
         <Link
           href={`/${categorySelected}`}
-          className={`text-center text-sm pl-2 py-1 border-transparent rounded-lg hover:bg-blue-500 ${
-            selectedTab === '' ? 'text-white bg-blue-600 active' : ''
-          }`}
+          className={`menu-item text-xs ${selectedTab === '' ? 'text-white bg-blue-600' : ''}`}
           onClick={() => setSelectedTab('')}
         >
           <span className="uppercase">Todos</span>
@@ -58,9 +56,7 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
           <Link
             href={`/${categorySelected}/${option.name}`}
             key={option.name}
-            className={`text-center text-sm pl-2 py-1 border-transparent rounded-lg hover:bg-blue-500 ${
-              selectedTab === option.name ? 'text-white bg-blue-600 active' : ''
-            }`}
+            className={`menu-item text-xs ${selectedTab === option.name ? 'text-white bg-blue-600' : ''}`}
             onClick={() => setSelectedTab(option.name)}
           >
             <span className="uppercase whitespace-nowrap">{option.name}</span>

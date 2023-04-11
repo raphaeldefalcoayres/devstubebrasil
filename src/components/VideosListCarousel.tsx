@@ -18,7 +18,7 @@ export default function VideosListCarousel({ videos, channels }: { videos: Video
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="videos gap-8 xl:gap-8 bg-sidebar rounded-xl p-4 xl:p-8 overflow-x-hidden overflow-y-auto">
       {videosByCategory &&
         Object.keys(videosByCategory).map((category) => (
           <Carousel key={category} data={videosByCategory[category]!} title={category} />

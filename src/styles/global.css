@@ -79,3 +79,76 @@ main {
 .tooltip:hover:after {
   visibility: visible;
 }
+
+.template {
+  grid-area: main;
+  grid-template-areas: 'sidebar content';
+  grid-template-columns: 70px minmax(400px, 1fr);
+}
+
+@media (max-width: 768px) {
+  .template {
+    grid-template-areas:
+      'sidebar'
+      'content';
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1fr;
+  }
+}
+
+.content {
+  grid-area: 'main2';
+  grid-template-areas:
+    'header'
+    'menu'
+    'submenu'
+    'content';
+
+  grid-template-rows: 36px 64px 1fr;
+}
+
+.menu-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  /* Esconde o scrollbar do container */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  width: calc(100vw - 200px);
+  flex-shrink: 0;
+  justify-content: space-around;
+}
+
+@media (max-width: 1200px) {
+  .menu-container {
+    width: calc(100vw - 160px);
+  }
+}
+
+@media (max-width: 966px) {
+  .menu-container {
+    width: calc(100vw - 120px);
+    justify-content: start !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    width: calc(100vw - 36px);
+    justify-content: start !important;
+  }
+}
+
+/* Esconde o scrollbar do container */
+.menu-container::-webkit-scrollbar {
+  display: none;
+}
+.menu-item {
+  flex-shrink: 0;
+  display: flex;
+  padding: 0 0 0 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-right: 1rem;
+}

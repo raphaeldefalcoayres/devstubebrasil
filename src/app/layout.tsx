@@ -29,12 +29,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Este é um site <b>beta</b> com alguns dados de vídeos youtube
           </span>
         </div>
-        <div className="xl:p-4 2xl:p-8">
-          <div className="md:overflow-hidden rounded-xl w-full h-full flex md:flex-row flex-col">
+        <div className="lg:p-4 xl:p-8 border-2 h-screen">
+          <div className="rounded-xl overflow-hidden h-full grid template">
             <Sidebar />
-            <div className="flex-1 h-full bg-content flex flex-col gap-4 md:gap-8 md:pr-8 md:pl-8 md:pb-8 p-4">
+            <div className="content bg-content p-4 xl:p-8 overflow-hidden grid gap-4 xl:gap-6">
               <Header />
-              <div className="h-full md:flex-1 mt-4">{children}</div>
+              {children}
             </div>
           </div>
         </div>

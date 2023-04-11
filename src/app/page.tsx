@@ -14,11 +14,9 @@ export default async function HomePage() {
   const channels = JSON.parse(channelsFileContents)
 
   return (
-    <div className="w-full flex flex-col gap-8 h-full">
+    <>
       <MenuTabs data={videos} selected="" />
-      <div className="md:flex-1 w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto h-[70vh] lg:max-h-[calc(100vh-200px)] xl:max-h-[calc(100vh-285px)]">
-        <VideosListCarousel videos={videos} channels={channels} />
-      </div>
-    </div>
+      <VideosListCarousel videos={videos} channels={channels} />
+    </>
   )
 }

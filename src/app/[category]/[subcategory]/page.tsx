@@ -27,7 +27,7 @@ export default async function SearchPage({ params }: { params: null | { category
   const subcategories = subCategoryOrder.find((category) => category.name === decodeURI(params?.category!))
 
   return (
-    <div className="w-full flex flex-col gap-4 md:gap-8 h-full">
+    <>
       <MenuTabs data={videos} selected={categorySelected} />
       <MenuSubTabs
         data={subcategories}
@@ -35,9 +35,8 @@ export default async function SearchPage({ params }: { params: null | { category
         categorySelected={categorySelected}
         subcategorySelected={subcategorySelected}
       />
-      <div className="md:flex-1 w-full bg-sidebar rounded-xl p-4 md:p-8 md:gap-8 gap-4 overflow-x-hidden md:overflow-y-auto h-[65vh] md:max-h-[calc(100vh-270px)]">
-        <PageVideosList videos={videos} channels={channels} />
-      </div>
-    </div>
+
+      <PageVideosList videos={videos} channels={channels} />
+    </>
   )
 }

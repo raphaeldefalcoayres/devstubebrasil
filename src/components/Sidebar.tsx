@@ -1,41 +1,21 @@
 'use client'
 
 import { FaYoutube } from 'react-icons/fa'
-import { FiMenu } from 'react-icons/fi'
 import { BiHomeAlt2 } from 'react-icons/bi'
-import { useState } from 'react'
 import Link from 'next/link'
 
 export default function Sidebar() {
-  const [open, setOpen] = useState(false)
   return (
-    <div
-      className={`md:h-full w-full bg-sidebar md:p-6 p-4 flex md:flex-col items-center gap-4 mt-3 md:mt-0 ${
-        open ? 'md:w-36' : 'md:w-auto'
-      }`}
-    >
+    <div className={`sidebar bg-sidebar flex md:flex-col items-center p-4 lg:items-center lg:py-4`}>
       <Link href="/" className="md:mb-4 flex items-center gap-2">
-        <FaYoutube className="text-blue-500 w-8 h-8" /> {open && <strong className="hidden md:flex">Devstube</strong>}
+        <FaYoutube className="text-blue-500 w-8 h-8" />
       </Link>
-      <button
-        className={`text-primary_light/50 hover:text-primary_light hidden ${open ? 'md:flex' : 'md:flex md:tooltip'} `}
-        data-tooltip="Expandir menu"
-        title="Expandir menu"
-        onClick={() => setOpen(!open)}
-      >
-        <FiMenu className="w-6 h-6" /> {open && <strong className="hidden md:flex ml-2">Menu</strong>}
-      </button>
       <div className="md:flex-1 flex md:flex-col justify-start md:justify-center gap-4 ml-auto md:ml-0">
-        <Link
-          href={'/'}
-          className={`text-primary_light/50 hover:text-primary_light ${open ? 'flex gap-2' : 'tooltip'} `}
-          data-tooltip="Home"
-          title="Home"
-        >
-          <BiHomeAlt2 className="w-6 h-6" /> {open && <strong className="hidden md:flex">Home</strong>}
+        <Link href={'/'} className={`text-primary_light/50 hover:text-primary_light`} data-tooltip="Home" title="Home">
+          <BiHomeAlt2 className="w-6 h-6" />
         </Link>
         {/* <button
-          className={`text-primary_light/50 hover:text-primary_light ${open ? 'flex gap-2' : 'tooltip'} `}
+          className={`text-primary_light/50 hover:text-primary_light`}
           data-tooltip="Cursos"
           title="Cursos"
         >

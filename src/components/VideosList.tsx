@@ -55,7 +55,7 @@ export default function VideoList({ videos, channels }: { videos: VideoModel[]; 
   })
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-4 4xl:grid-cols-6 gap-4 md:gap-8 w-full relative">
+    <div className="videos grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6 gap-8 xl:gap-8 bg-sidebar rounded-xl p-4 xl:p-8 overflow-x-hidden overflow-y-auto">
       {videos && videos.length <= 0 && (
         <div className="w-full h-full flex items-center justify-center absolute">
           Nenhum vídeo encontrado, tente utilizar outras palavras chaves.
