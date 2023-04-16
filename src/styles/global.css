@@ -96,7 +96,7 @@ main {
   }
 }
 
-.content {
+.home-content {
   grid-template-areas:
     'header'
     'menu'
@@ -104,6 +104,16 @@ main {
     'content';
 
   grid-template-rows: 36px 64px 1fr;
+}
+
+.content {
+  grid-template-areas:
+    'header'
+    'menu'
+    'submenu'
+    'content';
+
+  grid-template-rows: 36px 64px 32px 1fr;
 }
 
 .video-content {
