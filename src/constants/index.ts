@@ -98,7 +98,7 @@ export const subCategoryOrder = [
   },
   {
     name: 'backend',
-    subcategories: ['node.js', 'nest.js', 'go', 'php'],
+    subcategories: ['node.js', 'nest.js', 'go', 'php', 'python'],
   },
   {
     name: 'mobile',
