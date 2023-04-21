@@ -104,8 +104,6 @@ export const subCategoryOrder = [
       'react native',
       'remix.js',
       'vue.js',
-      'sveltekit',
-      'svelte',
     ],
   },
   {
