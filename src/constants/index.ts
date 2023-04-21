@@ -132,6 +132,6 @@ export const subCategoryOrder = [
   },
   {
     name: 'deploy',
-    subcategories: ['aws'],
+    subcategories: ['aws', 'digitalocean', 'vercel', 'netlify', 'railway', 'render'],
   },
 ]
