@@ -1,13 +1,15 @@
 'use client'
 
-import ExtraVideoItem from '@/components/ExtraVideo'
-import PlaylistItem from '@/components/PlaylistItem'
-import Spinner from '@/components/Spinner'
-import { getElapsedTime } from '@/utils'
-import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
 import ReactPlayer from 'react-player'
+
+import ExtraVideoItem from '@/components/ExtraVideo'
+import PlaylistItem from '@/components/PlaylistItem'
+import Spinner from '@/components/Spinner'
+
+import { getElapsedTime } from '@/utils'
+import { formatViewCount } from '@/utils/buildCategories'
 
 const Body = ({
   video,

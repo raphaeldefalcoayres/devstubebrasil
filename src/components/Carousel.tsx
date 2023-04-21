@@ -1,8 +1,10 @@
 'use client'
 
-import { buildCategories } from '@/utils/buildCategories'
 import { useEffect, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+
+import { buildCategories } from '@/utils/buildCategories'
+
 import VideoCard from './VideoCard'
 
 interface totalsByCagegoryProps {

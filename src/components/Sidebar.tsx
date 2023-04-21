@@ -1,8 +1,8 @@
 'use client'
 
-import { FaYoutube } from 'react-icons/fa'
-import { BiHomeAlt2 } from 'react-icons/bi'
 import Link from 'next/link'
+import { BiHomeAlt2 } from 'react-icons/bi'
+import { FaYoutube } from 'react-icons/fa'
 
 export default function Sidebar() {
   return (

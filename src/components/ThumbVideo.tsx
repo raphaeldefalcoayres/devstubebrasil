@@ -1,10 +1,11 @@
 'use client'
 
-import { formatDuration, getElapsedTime } from '@/utils'
-import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+
+import { formatDuration, getElapsedTime } from '@/utils'
+import { formatViewCount } from '@/utils/buildCategories'
 
 interface ThumbVideoProps {
   video: VideoModel

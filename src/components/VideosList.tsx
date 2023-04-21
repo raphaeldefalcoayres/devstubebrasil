@@ -1,6 +1,7 @@
 'use client'
 
 import { useParams, useSearchParams } from 'next/navigation'
+
 import Spinner from './Spinner'
 import VideoCard from './VideoCard'
 
@@ -17,7 +18,7 @@ export default function VideoList({ videos, channels }: { videos: VideoModel[]; 
     )
   }
 
-  let sanitizedSearchTerm = searchQuery?.toLowerCase().replace(/\.js/g, 'js') || ''
+  const sanitizedSearchTerm = searchQuery?.toLowerCase().replace(/\.js/g, 'js') || ''
 
   const singleVideos = videos.filter(
     (video) => video.type === 'single' || (video.type === 'list' && video.position === 1)
@@ -48,7 +49,7 @@ export default function VideoList({ videos, channels }: { videos: VideoModel[]; 
   videos = videos.map((videoMapped) => {
     const channelFinded = channels.find((channel) => channel.id === videoMapped.channelId)
     if (channelFinded) {
-      videoMapped.channelLogo = channelFinded?.defaultThumbnailUrl!
+      videoMapped.channelLogo = channelFinded?.defaultThumbnailUrl ?? ''
     }
 
     return videoMapped
