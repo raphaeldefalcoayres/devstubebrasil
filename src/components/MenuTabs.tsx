@@ -1,9 +1,10 @@
 'use client'
 
-import { Totals } from '@/@types/totals'
-import { categoryOrder } from '@/constants'
 import Link from 'next/link'
 import { useState } from 'react'
+
+import { Totals } from '@/@types/totals'
+import { categoryOrder } from '@/constants'
 
 type MenuTabsProps = {
   data: Totals

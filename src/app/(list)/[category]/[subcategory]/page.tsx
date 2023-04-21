@@ -1,9 +1,10 @@
-import path from 'path'
-import fs from 'fs'
-import PageVideosList from '@/components/VideosList'
 import { categoryOrder, subCategoryOrder } from '@/constants'
-import MenuTabs from '@/components/MenuTabs'
+import fs from 'fs'
+import path from 'path'
+
 import MenuSubTabs from '@/components/MenuSubTabs'
+import MenuTabs from '@/components/MenuTabs'
+import PageVideosList from '@/components/VideosList'
 
 export default async function SearchPage({ params }: { params: null | { category: string; subcategory: string } }) {
   const filePath = path.join(process.cwd(), 'data', 'videos.json')
@@ -24,7 +25,7 @@ export default async function SearchPage({ params }: { params: null | { category
 
   if (!videos) return 'loading...'
 
-  const subcategories = subCategoryOrder.find((category) => category.name === decodeURI(params?.category!))
+  const subcategories = subCategoryOrder.find((category) => category.name === decodeURI(params?.category ?? ''))
 
   const totalsFilePath = path.join(process.cwd(), 'data', 'totais.json')
   const totalsFileContents = await fs.promises.readFile(totalsFilePath, 'utf8')

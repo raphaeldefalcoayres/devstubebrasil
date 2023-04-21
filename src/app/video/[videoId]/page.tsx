@@ -1,6 +1,7 @@
-import { Body } from './body'
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
+
+import { Body } from './body'
 
 export default async function Page({ params }: { params: { videoId: string } }) {
   const filePath = path.join(process.cwd(), 'data', 'videos.json')
@@ -15,7 +16,7 @@ export default async function Page({ params }: { params: { videoId: string } }) 
 
   const channelFinded = channels.find((channel: ChannelModel) => channel.id === video?.channelId)
   if (video && channelFinded) {
-    video.channelLogo = channelFinded?.defaultThumbnailUrl!
+    video.channelLogo = channelFinded?.defaultThumbnailUrl
   }
 
   const relatedVideos =
@@ -38,15 +39,14 @@ export default async function Page({ params }: { params: { videoId: string } }) 
     ) {
       const channelFinded = channels.find((channel: ChannelModel) => channel.id === videoFiltered?.channelId)
       if (channelFinded) {
-        videoFiltered.channelLogo = channelFinded?.defaultThumbnailUrl!
+        videoFiltered.channelLogo = channelFinded?.defaultThumbnailUrl
       }
       return videoFiltered
     }
   })
 
   const startingVideo = video
-  let position = videsFiltered.findIndex((item) => item.videoId === video?.videoId)
-  let endingIndex = position + 1
+  const position = videsFiltered.findIndex((item) => item.videoId === video?.videoId)
 
   for (let i = position + 1; i < videsFiltered.length; i++) {
     const video = videos[i]
@@ -57,7 +57,6 @@ export default async function Page({ params }: { params: { videoId: string } }) 
       video.category !== startingVideo?.category &&
       video.subcategory !== startingVideo?.subcategory
     ) {
-      endingIndex = i
       break
     }
   }

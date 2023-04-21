@@ -1,6 +1,7 @@
-import { formatDuration } from '@/utils'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { formatDuration } from '@/utils'
 
 export default function PlaylistItem({
   video,

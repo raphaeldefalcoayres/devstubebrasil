@@ -1,5 +1,5 @@
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
 
 import MenuTabs from '@/components/MenuTabs'
 import VideosListCarousel from '@/components/VideosListCarousel'

@@ -1,7 +1,8 @@
-import { formatDuration, getElapsedTime } from '@/utils'
-import { formatViewCount } from '@/utils/buildCategories'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { formatDuration, getElapsedTime } from '@/utils'
+import { formatViewCount } from '@/utils/buildCategories'
 
 export default function VideoCard({ video, className }: { video: VideoModel; className?: string }) {
   return (
