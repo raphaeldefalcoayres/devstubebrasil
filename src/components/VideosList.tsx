@@ -54,9 +54,6 @@ export default function VideoList({ videos, channels }: { videos: VideoModel[]; 
     return videoMapped
   })
 
-  console.log('videos', videos)
-  console.log('params.subcategory', params.subcategory)
-
   return (
     <div className="bg-sidebar rounded-xl p-4 xl:p-8 overflow-x-hidden">
       {videos && videos.length <= 0 && (
