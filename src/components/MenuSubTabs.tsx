@@ -16,7 +16,9 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
   let totalTotal = 0
 
   const singleVideos = videos.filter(
-    (video) => video.type === 'single' || (video.type === 'list' && video.position === 1)
+    (video) =>
+      (video.type === 'single' || (video.type === 'list' && video.position === 1)) &&
+      video.category === categorySelected
   )
 
   if (data?.subcategories) {
@@ -24,7 +26,7 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
       let totalCount = 0
 
       for (const video of singleVideos) {
-        if (video.subcategory && video.subcategory.includes(subcategory)) {
+        if (video.subcategory && video.subcategory === subcategory) {
           totalCount++
           totalTotal++
         }
@@ -42,14 +44,7 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
           className={`menu-item text-xs ${selectedTab === '' ? 'text-white bg-blue-600' : ''}`}
           onClick={() => setSelectedTab('')}
         >
-          <span className="uppercase">Todos</span>
-          <span
-            className={` text-xs py-1 px-2 rounded-lg ${
-              selectedTab === '' ? 'text-white bg-white/30' : 'text-gray-800 bg-white/30'
-            } ml-2`}
-          >
-            {totalTotal}
-          </span>
+          <span className="uppercase pr-3">Todos</span>
         </Link>
 
         {categoryCounts.map((option) => (

@@ -8,9 +8,24 @@ import MenuSubTabs from '@/components/MenuSubTabs'
 export default async function SearchPage({ params }: { params: null | { category: string; subcategory: string } }) {
   const categorySelected =
     params?.category && categoryOrder.includes(decodeURI(params?.category)) ? decodeURI(params?.category) : ''
-  const filePath = path.join(process.cwd(), 'data', `${categorySelected}.json`)
-  const fileContents = await fs.promises.readFile(filePath, 'utf8')
-  const videos: VideoModel[] = JSON.parse(fileContents)
+  let videos: VideoModel[] = []
+
+  if (categorySelected.startsWith('frontend')) {
+    const files = fs.readdirSync('./data')
+
+    videos = files
+      .filter((file) => file.startsWith('frontend_'))
+      .reduce((acc: any, file: any) => {
+        const filePath = path.join(process.cwd(), 'data', file)
+        const fileContents = fs.readFileSync(filePath, 'utf8')
+        const videosFromFile = JSON.parse(fileContents)
+        return [...acc, ...videosFromFile]
+      }, []) as any
+  } else {
+    const filePath = path.join(process.cwd(), 'data', `${categorySelected}.json`)
+    const fileContents = await fs.promises.readFile(filePath, 'utf8')
+    videos = JSON.parse(fileContents)
+  }
 
   const channelsFilePath = path.join(process.cwd(), 'data', 'channels.json')
   const channelsFileContents = await fs.promises.readFile(channelsFilePath, 'utf8')
