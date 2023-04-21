@@ -6,7 +6,9 @@ import MenuTabs from '@/components/MenuTabs'
 import MenuSubTabs from '@/components/MenuSubTabs'
 
 export default async function SearchPage({ params }: { params: null | { category: string; subcategory: string } }) {
-  const filePath = path.join(process.cwd(), 'data', 'videos.json')
+  const categorySelected =
+    params?.category && categoryOrder.includes(decodeURI(params?.category)) ? decodeURI(params?.category) : ''
+  const filePath = path.join(process.cwd(), 'data', `${categorySelected}.json`)
   const fileContents = await fs.promises.readFile(filePath, 'utf8')
   const videos: VideoModel[] = JSON.parse(fileContents)
 
@@ -14,8 +16,12 @@ export default async function SearchPage({ params }: { params: null | { category
   const channelsFileContents = await fs.promises.readFile(channelsFilePath, 'utf8')
   const channels = JSON.parse(channelsFileContents)
 
-  const categorySelected =
-    params?.category && categoryOrder.includes(decodeURI(params?.category)) ? decodeURI(params?.category) : ''
+  const totalsFilePath = path.join(process.cwd(), 'data', 'totais.json')
+  const totalsFileContents = await fs.promises.readFile(totalsFilePath, 'utf8')
+  const totals = JSON.parse(totalsFileContents)
+
+  // const categorySelected =
+  //   params?.category && categoryOrder.includes(decodeURI(params?.category)) ? decodeURI(params?.category) : ''
   let subcategorySelected
   if (params?.subcategory) {
     subcategorySelected = decodeURI(params?.category)
@@ -28,7 +34,7 @@ export default async function SearchPage({ params }: { params: null | { category
 
   return (
     <>
-      <MenuTabs data={videos} selected={categorySelected} />
+      <MenuTabs data={totals} selected={categorySelected} />
       <MenuSubTabs
         data={subcategories}
         videos={videos}

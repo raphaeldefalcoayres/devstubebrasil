@@ -26,9 +26,13 @@ export default async function SearchPage({ params }: { params: null | { category
 
   const subcategories = subCategoryOrder.find((category) => category.name === decodeURI(params?.category!))
 
+  const totalsFilePath = path.join(process.cwd(), 'data', 'totais.json')
+  const totalsFileContents = await fs.promises.readFile(totalsFilePath, 'utf8')
+  const totals = JSON.parse(totalsFileContents)
+
   return (
     <>
-      <MenuTabs data={videos} selected={categorySelected} />
+      <MenuTabs data={totals} selected={categorySelected} />
       <MenuSubTabs
         data={subcategories}
         videos={videos}

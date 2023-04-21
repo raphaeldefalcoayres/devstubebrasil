@@ -1,0 +1,14 @@
+{
+  "totalGeral": 2269,
+  "totalPorCategoria": {
+    "frontend": 1209,
+    "teste": 25,
+    "backend": 399,
+    "banco de dados": 233,
+    "deploy": 37,
+    "lógica": 116,
+    "mobile": 53,
+    "ferramentas": 195,
+    "acessibilidade": 2
+  }
+}
