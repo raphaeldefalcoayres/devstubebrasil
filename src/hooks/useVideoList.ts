@@ -2,7 +2,6 @@ import { ReadonlyURLSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useVideosFilter } from './useVideosFilter'
 import { categoryOrder } from '@/constants'
-import { channel } from 'diagnostics_channel'
 
 export const useVideoList = ({
   videos,

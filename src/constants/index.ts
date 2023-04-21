@@ -75,7 +75,17 @@ export const tagsDefine = [
   'sair do zero',
 ]
 
-export const categoryOrder = ['lógica', 'frontend', 'backend', 'mobile', 'banco de dados', 'teste', 'ferramentas']
+export const categoryOrder = [
+  'lógica',
+  'frontend',
+  'backend',
+  'mobile',
+  'banco de dados',
+  'teste',
+  'ferramentas',
+  'acessibilidade',
+  'deploy',
+]
 export const subCategoryOrder = [
   {
     name: 'lógica',
@@ -94,6 +104,8 @@ export const subCategoryOrder = [
       'react native',
       'remix.js',
       'vue.js',
+      'sveltekit',
+      'svelte',
     ],
   },
   {
@@ -115,5 +127,13 @@ export const subCategoryOrder = [
   {
     name: 'ferramentas',
     subcategories: ['terminal', 'git', 'vscode', 'docker'],
+  },
+  {
+    name: 'acessibilidade',
+    subcategories: ['acessibilidade'],
+  },
+  {
+    name: 'deploy',
+    subcategories: ['aws'],
   },
 ]

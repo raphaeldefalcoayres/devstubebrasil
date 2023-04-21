@@ -6,7 +6,7 @@ if (typeof window !== 'undefined') {
   } else if (window.outerWidth === 1920) {
     ITEMS_PER_PAGE = 5 // XL size
   } else if (window.outerWidth >= 1200) {
-    ITEMS_PER_PAGE = 3 // MD size
+    ITEMS_PER_PAGE = 4 // MD size
   } else if (window.outerWidth >= 1024) {
     ITEMS_PER_PAGE = 2 // MD size
   } else if (window.outerWidth >= 700) {

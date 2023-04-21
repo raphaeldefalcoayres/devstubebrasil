@@ -704,6 +704,22 @@
     "highThumbnailHeight": 800
   },
   {
+    "id": "5432fa6c-638d-4f63-98a3-f9edf21f498f",
+    "title": "Cleber Gasparoto",
+    "description": "Lugar onde compartilho meu conhecimento adquirido ao longo da minha carreira na área de TI.\n\nAlguns dos temas que abordo no canal:\n- AWS\n- Terraform\n- Serverless\n- Javascript\n- Node.js\n",
+    "customUrl": "@clebergasparoto",
+    "publishedAt": "2010-09-26 23:07:02.000",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/MxYHzpnO4pll19tkut3ji9DPkmz0GWPbqJzylFBSfKcMMU1Rf3c4DLByZcijh67cZSmgonob8uA=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/MxYHzpnO4pll19tkut3ji9DPkmz0GWPbqJzylFBSfKcMMU1Rf3c4DLByZcijh67cZSmgonob8uA=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/MxYHzpnO4pll19tkut3ji9DPkmz0GWPbqJzylFBSfKcMMU1Rf3c4DLByZcijh67cZSmgonob8uA=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
     "id": "551f53a7-1c13-4c32-aa8a-516927c0b20b",
     "title": "Willian Justen",
     "description": "Um Screencast focado em Desenvolvimento Web, abordando assuntos como HTML, CSS, JS, SVG, React, Canvas, Acessibilidade e muito mais.",
@@ -764,6 +780,22 @@
     "mediumThumbnailWidth": 240,
     "mediumThumbnailHeight": 240,
     "highThumbnailUrl": "https://yt3.ggpht.com/Pg-u2l8K924PD7ggQ2ObsbB0U-ThtXVF32XLyLI9wxtuq6Ijfyk6XMy16_2f_93j7Z5XQfThFpM=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
+    "id": "5a87caa8-6a0d-4123-92a3-a7d68bfe09c1",
+    "title": "Thi Code",
+    "description": "Ensino sobre desenvolvimento web Full Stack e carreira dev",
+    "customUrl": "@thicode.channel",
+    "publishedAt": "2018-09-14 21:17:48.000",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/ytc/AGIKgqN5LJO9zvsrcfDDq5WpLTM6naYKwTDNEx4JMxgJpw=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/ytc/AGIKgqN5LJO9zvsrcfDDq5WpLTM6naYKwTDNEx4JMxgJpw=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/ytc/AGIKgqN5LJO9zvsrcfDDq5WpLTM6naYKwTDNEx4JMxgJpw=s800-c-k-c0x00ffffff-no-rj",
     "highThumbnailWidth": 800,
     "highThumbnailHeight": 800
   },
@@ -1024,6 +1056,22 @@
     "highThumbnailHeight": 800
   },
   {
+    "id": "7c04c81f-b619-41e3-82b1-b6d1f9599dce",
+    "title": "Dev Aprender",
+    "description": "Aqui você irá aprender:\n✔️Segredos para se tornar um PROFISSIONAL bem remunerado trabalhando com programação Python\n✔️ Freelancing, Dicas de Carreira, trabalho remoto, como ganhar mais como programador\n✔️ Javascript, SQL, Python, Automação, Aplicações do zero!\n\nRedes Sociais\n▶Instagram: https://www.instagram.com/devaprender/  \n",
+    "customUrl": "@devaprender",
+    "publishedAt": "2018-10-07 21:24:04.000",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/VKuVrrgTqg39qayXEgez_e4YSj15EzKI5gKQkghem7EOMGgcNtjp47CL9HMMEYESvS7qtfnyBhM=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/VKuVrrgTqg39qayXEgez_e4YSj15EzKI5gKQkghem7EOMGgcNtjp47CL9HMMEYESvS7qtfnyBhM=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/VKuVrrgTqg39qayXEgez_e4YSj15EzKI5gKQkghem7EOMGgcNtjp47CL9HMMEYESvS7qtfnyBhM=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
     "id": "83a25a61-acaa-4f7e-a4b9-8e7b39dedf34",
     "title": "Sujeito programador",
     "description": "",
@@ -1228,6 +1276,22 @@
     "mediumThumbnailWidth": 240,
     "mediumThumbnailHeight": 240,
     "highThumbnailUrl": "https://yt3.ggpht.com/mUGH5BkH1RIam8Zjc8A34J7wBS2HPAbzMlPSMYhObm13w0z-exQQ_bKFtWN-AknnSgXDmUTG5g=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
+    "id": "a4684960-e2ce-4054-ae86-df9331a45b69",
+    "title": "Rangel Software",
+    "description": "",
+    "customUrl": "@rangelsoftware7692",
+    "publishedAt": "2022-10-04 20:24:34.987",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/CXUDAWBOcGOAGP-0LbZXgoshg5bCNALceGRQNAhVPsjgGXL7oKG_vMxWuQNmeXEzAGK_Du77Mg=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/CXUDAWBOcGOAGP-0LbZXgoshg5bCNALceGRQNAhVPsjgGXL7oKG_vMxWuQNmeXEzAGK_Du77Mg=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/CXUDAWBOcGOAGP-0LbZXgoshg5bCNALceGRQNAhVPsjgGXL7oKG_vMxWuQNmeXEzAGK_Du77Mg=s800-c-k-c0x00ffffff-no-rj",
     "highThumbnailWidth": 800,
     "highThumbnailHeight": 800
   },
@@ -1456,6 +1520,22 @@
     "highThumbnailHeight": 800
   },
   {
+    "id": "bf965db9-fcd7-4506-b7fa-56e19d468bda",
+    "title": "Daniele Leão",
+    "description": "Sou Tech Lead e Educadora Node e Java\n",
+    "customUrl": "@danieleleao",
+    "publishedAt": "2011-03-25 19:35:37.000",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/fYK1NqXMEWNM4L_7MuL8EvwJ4jJODWhdFQOduWHL1EzwWvxftEmpE6sPggxypeFQA4ntYEdCUg=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/fYK1NqXMEWNM4L_7MuL8EvwJ4jJODWhdFQOduWHL1EzwWvxftEmpE6sPggxypeFQA4ntYEdCUg=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/fYK1NqXMEWNM4L_7MuL8EvwJ4jJODWhdFQOduWHL1EzwWvxftEmpE6sPggxypeFQA4ntYEdCUg=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
     "id": "c131d63c-b7d6-4aa2-8174-9e90d36beff4",
     "title": "Jovem Programador",
     "description": "O intuito deste canal é propagar conteudo sobre programação para todos, independente do nivel de conhecimento!\nÉ mostrar que todos nós somos capazes de realizar nossos sonhos!👨‍💻",
@@ -1568,6 +1648,22 @@
     "highThumbnailHeight": 800
   },
   {
+    "id": "d4bb6acd-7e59-438f-b22e-bd01a79f2654",
+    "title": "Full Stack na Prática",
+    "description": "Bem-vindo ao Full Stack na Prática! Aqui você encontrará conteúdo sobre programação web e desenvolvimento de sistemas fullstack. Aprenda a criar aplicações web incríveis e se torne um especialista em desenvolvimento fullstack com nossos tutoriais fáceis de seguir e exemplos práticos. Não importa se você é iniciante ou já possui experiência, temos conteúdo para todos os níveis. Assine o nosso canal e acompanhe nossas atualizações regulares para ficar por dentro das últimas tendências e técnicas em programação web e desenvolvimento fullstack.",
+    "customUrl": "@fullstacknapratica",
+    "publishedAt": "2022-12-17 23:05:58.711",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/sYwmfCHQTDpNcIfbs2NXnbzXmvDkYKBawH48qm6H6bpYQaDOi0_umOW04_SLvL7L6cJClolj=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/sYwmfCHQTDpNcIfbs2NXnbzXmvDkYKBawH48qm6H6bpYQaDOi0_umOW04_SLvL7L6cJClolj=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/sYwmfCHQTDpNcIfbs2NXnbzXmvDkYKBawH48qm6H6bpYQaDOi0_umOW04_SLvL7L6cJClolj=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
     "id": "d782ba82-24e0-4767-ac11-b406188251f6",
     "title": "Tejas Development & Design",
     "description": "Portfolio e vídeos de programação web",
@@ -1596,6 +1692,22 @@
     "mediumThumbnailWidth": 240,
     "mediumThumbnailHeight": 240,
     "highThumbnailUrl": "https://yt3.ggpht.com/ytc/AL5GRJXfOVXf4yuyEUWAOivuaxeBHprHi7IonpD6z7Ow=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
+    "id": "d9a420b2-b858-4c03-acda-26761598ac5c",
+    "title": "Matheus Castiglioni",
+    "description": "Tutoriais e dicas sobre desenvolvimento, programação e tecnologia.\n\nTodos os códigos e projetos desenvolvidos durante os vídeos podem ser facilmente reproduzidos por vocês.\n\nSe você quer aprender, amadurecer ou atualizar seus conhecimentos, inscreva-se no canal e não perca os próximos vídeos e novidades.\n\nDeixe seu comentário dizendo o que achou, dê sugestões referente à melhorias e ideias sobre vídeos que você gostaria de ver, além de compartilhar com a galera.",
+    "customUrl": "@matheuscastiglioni",
+    "publishedAt": "2015-05-12 00:36:53.000",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/ytc/AGIKgqNcWBTjN1J-ot003xbx35Y1eLTF_DYQF8DwUr2-6g=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/ytc/AGIKgqNcWBTjN1J-ot003xbx35Y1eLTF_DYQF8DwUr2-6g=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/ytc/AGIKgqNcWBTjN1J-ot003xbx35Y1eLTF_DYQF8DwUr2-6g=s800-c-k-c0x00ffffff-no-rj",
     "highThumbnailWidth": 800,
     "highThumbnailHeight": 800
   },
@@ -1740,6 +1852,22 @@
     "mediumThumbnailWidth": 240,
     "mediumThumbnailHeight": 240,
     "highThumbnailUrl": "https://yt3.ggpht.com/rObOEbK1sg50-EG5bF6XWqtUMS5FHsFMA5bOl50UwrXnezjLqovTdtPK6Ql9V-4jGkasyOXs1g=s800-c-k-c0x00ffffff-no-rj",
+    "highThumbnailWidth": 800,
+    "highThumbnailHeight": 800
+  },
+  {
+    "id": "ee4dd033-ef45-45a4-b609-4a3f7324abcc",
+    "title": "Bruno Pulis",
+    "description": "Fala pessoal, sou o Bruno Pulis e por aqui iremos conversar sobre: acessibilidade digital, desenvolvimento frontend, qualidade de software. \n\nTalvez você ouviu pela primeira vez o tema de acessibilidade e não sabe como e nem por onde começar. Muita hora nessa calma, eu já passei por isso. \n\nEstou aqui para te ajudar e crescer em acessibilidade digital. \n\nAnúncios e parcerias: \n- brunopulis@protonmail.com\n\nPara dúvida e sugestões mande nos comentários! \n\nVenha comigo explorar esse mundo fantástico da acessibilidade digital. \n",
+    "customUrl": "@brunopulis",
+    "publishedAt": "2018-05-06 05:15:59.000",
+    "defaultThumbnailUrl": "https://yt3.ggpht.com/eH3Kk-ebwz0Jq5HtcUQA8CdnRzhnYc6TF-i8DO31y4zTG5eji3iJUEaMmDzmTRH7N5z4hiOP=s88-c-k-c0x00ffffff-no-rj",
+    "defaultThumbnailWidth": 88,
+    "defaultThumbnailHeight": 88,
+    "mediumThumbnailUrl": "https://yt3.ggpht.com/eH3Kk-ebwz0Jq5HtcUQA8CdnRzhnYc6TF-i8DO31y4zTG5eji3iJUEaMmDzmTRH7N5z4hiOP=s240-c-k-c0x00ffffff-no-rj",
+    "mediumThumbnailWidth": 240,
+    "mediumThumbnailHeight": 240,
+    "highThumbnailUrl": "https://yt3.ggpht.com/eH3Kk-ebwz0Jq5HtcUQA8CdnRzhnYc6TF-i8DO31y4zTG5eji3iJUEaMmDzmTRH7N5z4hiOP=s800-c-k-c0x00ffffff-no-rj",
     "highThumbnailWidth": 800,
     "highThumbnailHeight": 800
   },

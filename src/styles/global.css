@@ -169,7 +169,7 @@ main {
 .menu-item {
   flex-shrink: 0;
   display: flex;
-  padding: 0 0 0 16px;
+  padding: 0 0 0 8px;
   align-items: center;
   justify-content: center;
   border-radius: 8px;

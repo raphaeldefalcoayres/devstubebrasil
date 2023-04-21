@@ -44,7 +44,7 @@ export default function MenuSubTabs({ data, videos, categorySelected, subcategor
         >
           <span className="uppercase">Todos</span>
           <span
-            className={` text-sm py-1 px-2 rounded-lg ${
+            className={` text-xs py-1 px-2 rounded-lg ${
               selectedTab === '' ? 'text-white bg-white/30' : 'text-gray-800 bg-white/30'
             } ml-2`}
           >

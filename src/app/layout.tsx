@@ -1,6 +1,4 @@
 import Analytics from '@/components/Analytics'
-import Header from '@/components/Header'
-import Sidebar from '@/components/Sidebar'
 
 import '@/styles/global.css'
 
@@ -29,7 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Este é um site <b>beta</b> com alguns dados de vídeos youtube
           </span>
         </div>
-        <div className="lg:p-4 xl:p-8 md:h-screen">{children}</div>
+        <div className="lg:p-4 xl:py-8 xl:px-4 md:h-screen">{children}</div>
       </body>
     </html>
   )
